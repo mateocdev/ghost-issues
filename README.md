@@ -62,12 +62,12 @@ npx cypress run
 Esto ejecutará todas las pruebas en el directorio cypress/e2e.
 
 4. **Estructura del Proyecto**
-cypress/
+- cypress/
 
-e2e/: Contiene todos los archivos de prueba escritos en Gherkin.
-fixtures/: Aquí se encuentran los datos de prueba si son necesarios.
-support/: Archivos de configuración y comandos personalizados para Cypress.
-features/: Archivos de características que describen los escenarios de prueba usando el lenguaje Gherkin.
+- e2e/: Contiene todos los archivos de prueba escritos en Gherkin.
+- fixtures/: Aquí se encuentran los datos de prueba si son necesarios.
+- support/: Archivos de configuración y comandos personalizados para Cypress.
+- features/: Archivos de características que describen los escenarios de prueba usando el lenguaje Gherkin.
 
 5. **Licencia**
 Este proyecto está licenciado bajo la Licencia MIT. Para más detalles, consulta el archivo LICENSE.
