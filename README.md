@@ -22,14 +22,14 @@ Antes de comenzar con la instalación, asegúrate de tener lo siguiente instalad
 
 Sigue estos pasos para configurar el entorno de prueba:
 
-1. **Clona este repositorio a tu máquina local:**
+**Clona este repositorio a tu máquina local:**
 
    ```bash
    git clone https://github.com/tu-usuario/ghost-issues.git
    cd ghost-issues
    ```
 
-2. **Instala las dependencias del proyecto:
+**Instala las dependencias del proyecto:**
 
 Ejecuta el siguiente comando para instalar Cypress y otras dependencias necesarias:
 
@@ -38,10 +38,10 @@ npm install
 ```
 
 
-3. **Ejecución de Pruebas**
+## Ejecución de Pruebas
 Una vez que hayas instalado las dependencias, puedes ejecutar las pruebas de las siguientes maneras:
 
-Ejecución en la Interfaz de Usuario de Cypress:
+**Ejecución en la Interfaz de Usuario de Cypress:**
 
 Esto abrirá la interfaz gráfica de Cypress, donde puedes ver las pruebas en tiempo real.
 
@@ -51,7 +51,7 @@ npx cypress open
 
 Una vez abierta la interfaz, selecciona el archivo de características que deseas ejecutar.
 
-Ejecución en la Línea de Comandos:
+**Ejecución en la Línea de Comandos:**
 
 Si prefieres ejecutar las pruebas en modo headless (sin interfaz gráfica), puedes hacerlo con:
 
@@ -61,7 +61,7 @@ npx cypress run
 
 Esto ejecutará todas las pruebas en el directorio cypress/e2e.
 
-4. **Estructura del Proyecto**
+## Estructura del Proyecto
 - cypress/
 
 - e2e/: Contiene todos los archivos de prueba escritos en Gherkin.
@@ -69,6 +69,6 @@ Esto ejecutará todas las pruebas en el directorio cypress/e2e.
 - support/: Archivos de configuración y comandos personalizados para Cypress.
 - features/: Archivos de características que describen los escenarios de prueba usando el lenguaje Gherkin.
 
-5. **Licencia**
+## Licencia
 Este proyecto está licenciado bajo la Licencia MIT. Para más detalles, consulta el archivo LICENSE.
 
