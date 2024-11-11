@@ -1,8 +1,8 @@
 {
-  "name": "ghost-issues",
+  "name": "new",
   "version": "1.0.0",
-  "description": "README",
-  "main": "cypress.config.js",
+  "description": "",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -10,7 +10,18 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "cypress": "^13.15.2",
-    "cypress-cucumber-preprocessor": "^4.3.1"
+    "typescript": "^5.6.3"
+  },
+  "dependencies": {
+    "@badeball/cypress-cucumber-preprocessor": "^21.0.2",
+    "@bahmutov/cypress-esbuild-preprocessor": "^2.2.3",
+    "cypress": "^10.0.0"
+  },
+  "cypress-cucumber-preprocessor": {
+    "stepDefinitions": [
+      "cypress/e2e/[filepath]/**/*.{js,ts}",
+      "cypress/e2e/[filepath].{js,ts}",
+      "cypress/support/step_definitions/**/*.{js,ts}"
+    ]
   }
 }

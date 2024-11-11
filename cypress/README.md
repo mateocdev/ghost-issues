@@ -17,6 +17,7 @@ Antes de comenzar con la instalación, asegúrate de tener lo siguiente instalad
 - [Node.js](https://nodejs.org/) (versión 12 o superior)
 - [npm](https://www.npmjs.com/) (normalmente incluido con Node.js)
 - [Git](https://git-scm.com/)
+- [TypeScript](https://www.typescriptlang.org/)
 
 ## Instalación
 
@@ -28,6 +29,12 @@ Sigue estos pasos para configurar el entorno de prueba:
    git clone https://github.com/tu-usuario/ghost-issues.git
    cd ghost-issues
    ```
+
+**Configuracion en ghost local**
+
+- Asegurate de que ghost este corriendo localmente en el puerto http://localhost:2368/
+- Crea un perfil de administrador con los siguientes credenciales: mateo.castano1@yahoo.com , password: 1qa2w3ed$%
+
 
 **Instala las dependencias del proyecto:**
 
@@ -71,4 +78,3 @@ Esto ejecutará todas las pruebas en el directorio cypress/e2e.
 
 ## Licencia
 Este proyecto está licenciado bajo la Licencia MIT. Para más detalles, consulta el archivo LICENSE.
-

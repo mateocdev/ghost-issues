@@ -1,5 +1,4 @@
-import { Given, Then, When } from "cypress-cucumber-preprocessor/steps";
-
+import { Given, Then, When } from "@badeball/cypress-cucumber-preprocessor";
 Given("el administrador ha iniciado sesión", () => {
   cy.visit("/ghost/#/signin");
   cy.get('input[name="identification"]').type("admin@ejemplo.com");
