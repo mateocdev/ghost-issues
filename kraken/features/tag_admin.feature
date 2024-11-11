@@ -2,14 +2,9 @@ Feature: Administración de Tags
 
 @user1 @web
 Scenario: Tag-01 - verificar que un administrador puede crear una nueva etiqueta con solo el nombre
-  Given I navigate to page "http://localhost:2368/ghost/#/signin"
+  Given I am a logged in admin with "<USERNAME1>" and "<PASSWORD1>"
   And I wait for 1 seconds
-  When I enter email "<USERNAME1>"
-  And I enter password "<PASSWORD1>"
-  And I wait for 1 seconds
-  And I click sign in
-  And I wait for 1 seconds
-  And I click on Tags menu on sidebar
+  When I click on Tags menu on sidebar
   And I wait for 1 seconds
   And I click New tag
   And I wait for 2 seconds
@@ -24,16 +19,11 @@ Scenario: Tag-01 - verificar que un administrador puede crear una nueva etiqueta
 
 @user2 @web
 Scenario: Tag-02 - Verificar que un administrador puede asignar etiquetas a una publicación.
-  Given I navigate to page "http://localhost:2368/ghost/#/signin"
-  And I wait for 1 seconds
-  When I enter email "<USERNAME1>"
-  And I enter password "<PASSWORD1>"
-  And I wait for 1 seconds
-  And I click sign in
+  Given I am a logged in admin with "<USERNAME1>" and "<PASSWORD1>"
   And I wait for 1 seconds
   And I click on Posts menu on sidebar
   And I wait for 1 seconds
-  And I click New Post
+  When I click New Post
   And I wait for 2 seconds
   And I click on Post title input
   And I wait for 1 seconds
