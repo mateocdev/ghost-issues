@@ -3,6 +3,14 @@ const { Given, When, Then } = require('@cucumber/cucumber');
 const loginPageObject = require('../pages/login_page');
 const loginPage = new loginPageObject();
 
+Given('I am a logged in admin with {kraken-string} and {kraken-string}', async function (username, password) {
+    loginPage.setBrowserInstance(this.driver);
+    await loginPage.visit();
+    await loginPage.enterEmail(username);
+    await loginPage.enterPassword(password);
+    return await loginPage.clickLoginButton();
+});
+
 When('I enter email {kraken-string}', async function (email) {
     loginPage.setBrowserInstance(this.driver);
     return await loginPage.enterEmail(email);

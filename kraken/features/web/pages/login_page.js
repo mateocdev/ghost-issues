@@ -1,7 +1,7 @@
 function LoginPage() {}
 
-LoginPage.prototype.visit = function() {
-    this.browser.visit("http://localhost:2368/ghost/#/signin");
+LoginPage.prototype.visit = async function() {
+    return this.driver.url("http://localhost:2368/ghost/#/signin");
 };
 
 LoginPage.prototype.enterEmail = async function(email) {
