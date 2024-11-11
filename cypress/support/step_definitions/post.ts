@@ -4,22 +4,14 @@ import PostPage from "../page_object/postPage";
 
 const loginPage = new LoginPage();
 
-Given("el administrador ha iniciado sesion", (email, password) => {
-  loginPage.visit();
-  loginPage.enterEmail(email);
-  loginPage.enterPassword(password);
-  loginPage.clickLoginButton();
-});
-
 Given("el administrador está en la página de creación de publicaciones", () => {
   PostPage.visitNewPost();
 });
 
 When(
-  "el administrador ingresa un título {string} y contenido {string}",
+  "el administrador ingresa un título {string} ",
   (title: string, content: string) => {
     PostPage.enterTitle(title);
-    PostPage.enterContent(content);
   }
 );
 

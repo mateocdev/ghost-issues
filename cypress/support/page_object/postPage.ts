@@ -12,7 +12,7 @@ class PostPage {
     this.newPostCreate = "[data-test-new-post-button]";
     this.titleInput = "[data-test-editor-title-input]";
     this.contentInput = ".koenig-react-editor";
-    this.publishButton = "[data-test-breadcrumb]";
+    this.publishButton = '[data-test-link="posts"]';
     this.confirmPublishButton = '[data-test-button="continue"]';
     this.postsList = ".gh-content-entry-title"; // Selector de la lista de publicaciones
   }
@@ -40,7 +40,6 @@ class PostPage {
 
   public publishPost(): void {
     cy.get(this.publishButton).click();
-    cy.get(this.confirmPublishButton).click();
   }
 
   public unpublishPost(): void {}
