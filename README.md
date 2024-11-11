@@ -2,5 +2,5 @@
 
 ## Contenidos
 
-- [Pruebas con cypress](#cypress/README.md)
-- [Pruebas con kraken](#kraken/README.md)
+- [Pruebas con cypress](#blob/master/cypress/README.md)
+- [Pruebas con kraken](#blob/master/kraken/README.md)
