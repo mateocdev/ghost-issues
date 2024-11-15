@@ -6,6 +6,7 @@ class PostPage {
   private publishButton: string;
   private confirmPublishButton: string;
   private postsList: string;
+  private publishFinalButton: string;
 
   constructor() {
     this.newPostButton = "[data-test-nav='posts']";
@@ -13,6 +14,7 @@ class PostPage {
     this.titleInput = "[data-test-editor-title-input]";
     this.contentInput = ".koenig-react-editor";
     this.publishButton = '[data-test-link="posts"]';
+    this.publishFinalButton = '[data-test-button="publish-flow"]';
     this.confirmPublishButton = '[data-test-button="continue"]';
     this.postsList = ".gh-content-entry-title"; // Selector de la lista de publicaciones
   }
@@ -50,10 +52,25 @@ class PostPage {
   }
 
   public publishPost(): void {
-    cy.get(this.publishButton).click();
+    cy.wait(1000);
+    cy.contains("Publish").click();
+    cy.wait(1000);
+    cy.get(this.confirmPublishButton).click();
+    cy.wait(1000);
+    cy.get('[data-test-task-button-state="idle"]').click();
+    cy.wait(1000);
+    cy.get('[data-test-button="close-publish-flow"]').click();
   }
 
-  public unpublishPost(): void {}
+  public unpublishPost(): void {
+    cy.get(this.postsList).contains("uniandes").click();
+    cy.wait(1000);
+    cy.contains("Unpublish").click();
+    cy.wait(1000);
+    cy.get('[data-test-button="revert-to-draft"]').click();
+    cy.wait(1000);
+    cy.contains("Publish").should("be.visible");
+  }
 }
 
 export default new PostPage();

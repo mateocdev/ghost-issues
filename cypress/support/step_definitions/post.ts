@@ -28,13 +28,16 @@ Then("la publicación debería aparecer en la lista de publicaciones", () => {
   PostPage.verifyPostInList("Nueva Publicación");
 });
 
-Given("el administrador tiene una publicación existente", () => {});
+Given("el administrador tiene una publicación existente", () => {
+  cy.wait(1000);
+  PostPage.verifyPostInList;
+});
 
 When("el administrador publica la entrada", () => {
   PostPage.publishPost();
 });
 
-When("luego despublica la entrada", () => {
+Then("luego despublica la entrada", () => {
   PostPage.unpublishPost();
 });
 
