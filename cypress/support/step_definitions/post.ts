@@ -1,17 +1,22 @@
 import { Given, Then, When } from "@badeball/cypress-cucumber-preprocessor";
-import LoginPage from "../page_object/loginPage";
 import PostPage from "../page_object/postPage";
 
-const loginPage = new LoginPage();
+Then("hace clic en el boton de new post", () => {
+  PostPage.clickNewPost();
+});
 
-Given("el administrador está en la página de creación de publicaciones", () => {
+When("el administrador puede ver la seccion de crear post", () => {
   PostPage.visitNewPost();
 });
 
+Then("hace click en el boton create post", () => {
+  PostPage.newPostClick();
+});
+
 When(
-  "el administrador ingresa un título {string} ",
+  "el administrador ingresa un título {string}, {string}",
   (title: string, content: string) => {
-    PostPage.enterTitle(title);
+    PostPage.enterTitle(title, content);
   }
 );
 

@@ -20,5 +20,5 @@ When("hace clic en el botón de inicio de sesión", () => {
 });
 
 Then("el administrador debería ver el panel de control", () => {
-  cy.get(".gh-main").should("be.visible");
+  cy.get("[data-test-nav='dashboard']").should("be.visible");
 });
