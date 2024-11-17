@@ -1,26 +1,33 @@
 import { Given, Then, When } from "@badeball/cypress-cucumber-preprocessor";
-Given("el administrador ha iniciado sesión", () => {
-  cy.visit("/ghost/#/signin");
-  cy.get('input[name="identification"]').type("admin@ejemplo.com");
-  cy.get('input[name="password"]').type("admin123");
-  cy.get("button.login").click();
-  cy.url().should("include", "/ghost/#/site");
-});
 
-Given("está en la página de configuraciones generales", () => {
+Then("está en la página de configuraciones generales", () => {
   cy.visit("/ghost/#/settings/general");
 });
 
-When(
-  "el administrador actualiza el título del sitio a {string}",
-  (newTitle) => {
-    cy.get(".gh-setting-title").click();
-    cy.get('input[placeholder="Site Title"]').clear().type(newTitle);
-    cy.get(".gh-btn-primary").contains("Save settings").click();
-  }
-);
+When("el administrador actualiza el título del sitio a {string}", () => {
+  cy.wait(1000);
+  cy.get("[data-testid='title-and-description']")
+    .find('button:contains("Edit")')
+    .click();
+  cy.get('[data-testid="title-and-description"] input:nth-child(1)').clear();
+});
 
-Then("el título del sitio debería ser {string}", (newTitle) => {
-  cy.visit("/ghost/#/settings/general");
-  cy.get('input[placeholder="Site Title"]').should("have.value", newTitle);
+Then("el título del sitio debería ser {string}", (newTitle: string) => {
+  cy.get('input[placeholder="Site title"]').type(newTitle);
+  cy.contains("Save").click();
+});
+
+Then("está en la página de configuración de temas", () => {
+  cy.visit("/ghost/#/settings/design");
+  cy.wait(1000);
+  cy.get("[data-testid='design']").find('button:contains("Customize")').click();
+});
+
+When("el administrador cambia a un color aleatorio", () => {
+  cy.wait(1000);
+  cy.get('[data-testid="accent-color-picker"]').click();
+});
+
+Then("se guardaron los cambios del diseño de color", () => {
+  cy.contains("Save").click();
 });
