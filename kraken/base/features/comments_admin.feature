@@ -2,7 +2,7 @@ Feature: Administración de miembros
 
 @user1 @web
 Scenario: Comment-01: Verificar que un administrador puede ver la lista de comentarios en una publicación.
-  Given I am a logged in admin with "<USERNAME1>" and "<PASSWORD1>"
+  Given I am a logged in admin with "<USERNAME>" and "<PASSWORD>" at "<GHOST_URL>"
   And I wait for 2 seconds
   When I click on settings menu on sidebar
   And I wait for 2 seconds

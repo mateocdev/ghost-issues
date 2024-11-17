@@ -2,7 +2,7 @@ Feature: Administración de miembros
 
 @user1 @web
 Scenario: Member-01 - verificar que un administrador puede crear una nueva etiqueta con solo el nombre
-  Given I am a logged in admin with "<USERNAME1>" and "<PASSWORD1>"
+  Given I am a logged in admin with "<USERNAME>" and "<PASSWORD>" at "<GHOST_URL>"
   And I wait for 1 seconds
   When I click on Members menu on sidebar
   And I wait for 1 seconds
@@ -21,7 +21,7 @@ Scenario: Member-01 - verificar que un administrador puede crear una nueva etiqu
 
 @user2 @web
 Scenario: Member-02 - verificar que un administrador puede buscar un miembro existente
-  Given I am a logged in admin with "<USERNAME1>" and "<PASSWORD1>"
+  Given I am a logged in admin with "<USERNAME>" and "<PASSWORD>" at "<GHOST_URL>"
   And I wait for 1 seconds
   When I click on Members menu on sidebar
   And I wait for a signal containing "member_created" for 60 seconds

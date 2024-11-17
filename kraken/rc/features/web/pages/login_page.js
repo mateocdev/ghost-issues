@@ -1,6 +1,9 @@
 function LoginPage() {}
 
-LoginPage.prototype.visit = async function() {
+LoginPage.prototype.visit = async function(url) {
+    if (url) {
+        return this.driver.url(url);
+    }
     return this.driver.url("http://localhost:2368/ghost/#/signin");
 };
 

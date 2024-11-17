@@ -2,7 +2,7 @@ Feature: Administración de Tags
 
 @user1 @web
 Scenario: Tag-01 - verificar que un administrador puede crear una nueva etiqueta con solo el nombre
-  Given I am a logged in admin with "<USERNAME1>" and "<PASSWORD1>"
+  Given I am a logged in admin with "<USERNAME>" and "<PASSWORD>" at "<GHOST_URL>"
   And I wait for 1 seconds
   When I click on Tags menu on sidebar
   And I wait for 1 seconds
@@ -19,11 +19,11 @@ Scenario: Tag-01 - verificar que un administrador puede crear una nueva etiqueta
 
 @user2 @web
 Scenario: Tag-02 - Verificar que un administrador puede asignar etiquetas a una publicación.
-  Given I am a logged in admin with "<USERNAME1>" and "<PASSWORD1>"
+  Given I am a logged in admin with "<USERNAME>" and "<PASSWORD>" at "<GHOST_URL>"
   And I wait for 1 seconds
   And I click on Posts menu on sidebar
   And I wait for 1 seconds
-  When I click New Post
+  And I click New Post
   And I wait for 2 seconds
   And I click on Post title input
   And I wait for 1 seconds
@@ -35,7 +35,7 @@ Scenario: Tag-02 - Verificar que un administrador puede asignar etiquetas a una 
   And I wait for 7 seconds
   And I check post is saved as draft 
   And I wait for a signal containing "tag_created" for 60 seconds
-  And I click on post settings button
+  When I click on post settings button
   And I wait for 2 seconds
   And I click on tags input
   And I wait for 1 seconds
@@ -43,4 +43,5 @@ Scenario: Tag-02 - Verificar que un administrador puede asignar etiquetas a una 
   And I wait for 1 seconds
   And I confirm adding tag to post
   And I wait for 1 seconds
-  Then I force post to be saved returning to post list
+  And I force post to be saved closing post settings
+  Then I check post is saved as draft
