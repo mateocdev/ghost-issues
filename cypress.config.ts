@@ -6,6 +6,7 @@ import createBundler = require("@bahmutov/cypress-esbuild-preprocessor");
 export default defineConfig({
   e2e: {
     specPattern: "**/*.feature",
+    chromeWebSecurity: false,
     async setupNodeEvents(
       on: Cypress.PluginEvents,
       config: Cypress.PluginConfigOptions
