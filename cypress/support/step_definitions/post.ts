@@ -40,8 +40,3 @@ When("el administrador publica la entrada", () => {
 Then("luego despublica la entrada", () => {
   PostPage.unpublishPost();
 });
-
-Then("la entrada no debería estar visible al público", () => {
-  // Verifica que la entrada no esté visible al público
-  // Esto puede requerir lógica adicional para acceder al frontend público
-});
