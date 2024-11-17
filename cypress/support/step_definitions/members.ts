@@ -5,6 +5,7 @@ Then(
   (name: string) => {
     cy.wait(100);
     cy.visit("/ghost/#/members");
+    cy.screenshot();
     cy.wait(100);
     cy.get("[data-test-new-member-button='true']").click();
     cy.wait(100);
@@ -13,6 +14,7 @@ Then(
     cy.get("[data-test-input='member-email']").type(
       Math.floor(Math.random() * 100000) + "@example.com"
     );
+    cy.screenshot();
     cy.get("[data-test-button='save']").click();
   }
 );

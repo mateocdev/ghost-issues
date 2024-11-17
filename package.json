@@ -15,7 +15,8 @@
   "dependencies": {
     "@badeball/cypress-cucumber-preprocessor": "^21.0.2",
     "@bahmutov/cypress-esbuild-preprocessor": "^2.2.3",
-    "cypress": "^10.0.0"
+    "cypress": "^10.0.0",
+    "resemblejs": "^5.0.0"
   },
   "cypress-cucumber-preprocessor": {
     "stepDefinitions": [
