@@ -1,5 +1,5 @@
 import { Given, Then, When } from "@badeball/cypress-cucumber-preprocessor";
-import PostPage from "../page_object/postPage";
+import PostPage from "../../page_object/postPage";
 
 Then("hace clic en el boton de new post", () => {
   PostPage.clickNewPost();
