@@ -1,7 +1,7 @@
 Feature: Administración de Tags
 
 @user1 @web
-Scenario: Tag-01 - verificar que un administrador puede crear una nueva etiqueta con solo el nombre
+Scenario: Tag-01: verificar que un administrador puede crear una nueva etiqueta con solo el nombre
   Given I am a logged in admin with "<USERNAME>" and "<PASSWORD>" at "<GHOST_URL>"
   And I wait for 1 seconds
   When I click on Tags menu on sidebar
@@ -18,7 +18,7 @@ Scenario: Tag-01 - verificar que un administrador puede crear una nueva etiqueta
   Then I send a signal to user 2 containing "tag_created"
 
 @user2 @web
-Scenario: Tag-02 - Verificar que un administrador puede asignar etiquetas a una publicación.
+Scenario: Tag-02: Verificar que un administrador puede asignar etiquetas a una publicación.
   Given I am a logged in admin with "<USERNAME>" and "<PASSWORD>" at "<GHOST_URL>"
   And I wait for 1 seconds
   And I click on Posts menu on sidebar

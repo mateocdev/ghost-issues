@@ -13,3 +13,5 @@ Scenario: Comment-01: Verificar que un administrador puede ver la lista de comen
   And I set allow all members to comment
   And I wait for 2 seconds
   And I click on save comments config
+  And I wait for 2 seconds
+  Then I should see comments config saved

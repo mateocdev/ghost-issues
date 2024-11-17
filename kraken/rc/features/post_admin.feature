@@ -1,7 +1,7 @@
 Feature: Administración de Publicaciones
 
 @user1 @web
-Scenario: Post-01 - Verificar que un administrador puede crear una nueva publicación con título y contenido.
+Scenario: Post-01: - Verificar que un administrador puede crear una nueva publicación con título y contenido.
   Given I am a logged in admin with "<USERNAME>" and "<PASSWORD>" at "<GHOST_URL>"
   And I wait for 1 seconds
   When I click on Posts menu on sidebar
@@ -19,7 +19,7 @@ Scenario: Post-01 - Verificar que un administrador puede crear una nueva publica
   And I check post is saved as draft
 
 @user2 @web
-Scenario: Post-02 - Verificar que un administrador puede publicar un post existente.
+Scenario: Post-02: - Verificar que un administrador puede publicar un post existente.
   Given I am a logged in admin with "<USERNAME>" and "<PASSWORD>" at "<GHOST_URL>"
   And I wait for 1 seconds
   When I click on Posts menu on sidebar
