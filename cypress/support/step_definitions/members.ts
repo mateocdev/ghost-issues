@@ -24,3 +24,14 @@ Then("el administrador debería ver el miembro creado", () => {
   cy.wait(100);
   cy.contains("Joe Doe").should("be.visible");
 });
+
+Then(
+  "el administrador debería ver el miembro {string} en la lista de miembros",
+  () => {
+    cy.wait(100);
+    cy.visit("/ghost/#/members");
+    cy.get('[data-test-input="members-search"]').click().type("Joe Doe");
+    cy.wait(100);
+    cy.contains("Joe Doe").should("be.visible");
+  }
+);
