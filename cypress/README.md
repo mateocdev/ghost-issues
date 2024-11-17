@@ -32,7 +32,13 @@ Sigue estos pasos para configurar el entorno de prueba:
 
 **Configuracion en ghost local**
 
-- Asegurate de que ghost este corriendo localmente en el puerto http://localhost:2368/
+- Asegurate de que ghost este corriendo localmente en el puerto http://localhost:2368/ para la version rc
+- Para la version base corre el comando 
+```bash
+docker run --name my-ghost -e url=http://localhost:3001 -p 3001:2368 ghost:4.5
+```
+- Se recomienda usar docker para la version 4.5
+- Para la version 4.5 es obligatorio usar el puerto 3001
 - Crea un perfil de administrador con los siguientes credenciales: mateo.castano1@yahoo.com , password: 1qa2w3ed$%
 
 
@@ -73,7 +79,9 @@ Esto ejecutará todas las pruebas en el directorio cypress/e2e.
 
 - e2e/: Contiene todos los archivos de prueba escritos en Gherkin.
 - fixtures/: Aquí se encuentran los datos de prueba si son necesarios.
-- support/: Archivos de configuración y comandos personalizados para Cypress.
+- support/page_object: Continene los archivos con patron de page object
+- support/step_definitions/base: Contiene los archivos de cypress con page object y given when then para la version 4.5 de ghost
+- support/step_definitions/rc: Contiene los archivos de cypress con page object y given when then para la version lastest de ghost
 - features/: Archivos de características que describen los escenarios de prueba usando el lenguaje Gherkin.
 
 ## Licencia
