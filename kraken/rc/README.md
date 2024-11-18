@@ -51,7 +51,7 @@ Esto abrirá la interfaz gráfica de Kraken, donde puedes ver las pruebas en tie
 ```
 
 Esto ejecutará todas las pruebas que se encuentran en los archivos .feature dentro de la carpeta features.
-Y adicionalmente tomara screenshots utilizando la herramienta BackstopJS
+Y adicionalmente tomara screenshots de cada uno de los steps de los escenarios.
 
 ## Estructura del Proyecto
 - Kraken/rc
