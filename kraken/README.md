@@ -44,9 +44,10 @@ Una vez ejecutadas las pruebas e2e para ambas versiones se generaran los screens
 - base/screenshots
     - carpetas con el identificador del escenario y dentro las imagenes de cada step
 
+**Importante: para leer la documentacion de la herramienta que ejecuta las pruebas de regresion visual lea el siguiente README:**
+- [Documentacion de herramienta de regresion visual](https://github.com/mateocdev/ghost-issues/blob/master/kraken/vrtool/README.md)
+
 **Ahora esta listo para generar las pruebas de regresion visual. Dentro de la carpeta raiz del repositorio clonado:**
-
-
 **Instala las dependencias de la herramienta de regresion visual (BackStopJS):**
 
 Ejecuta el siguiente comando para instalar las dependencias necesarias para ejecutar la regresion visual:
