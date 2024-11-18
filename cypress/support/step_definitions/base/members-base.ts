@@ -22,22 +22,12 @@ Then(
   }
 );
 
-Then("el administrador debería ver el miembro creado base", () => {
-  cy.wait(100);
-  cy.get(".gh-nav-body").contains("Members").click();
-  cy.visit("/ghost/#/members");
-  cy.get('[data-test-input="members-search"]').click().type("Joe Doe");
-  cy.screenshot("membersGhost/3base");
-  cy.wait(100);
-  cy.contains("Joe Doe").should("be.visible");
-});
-
 Then(
   "el administrador debería ver el miembro {string} en la lista de miembros base",
   () => {
     cy.wait(100);
-    cy.visit("/ghost/#/members");
-    cy.get('[data-test-input="members-search"]').click().type("Joe Doe");
+    cy.get(".gh-nav-body").contains("Members").click();
+    cy.screenshot("membersGhost/3base");
     cy.wait(100);
     cy.contains("Joe Doe").should("be.visible");
   }

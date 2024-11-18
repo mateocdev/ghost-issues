@@ -4,7 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "node compareImages.ts"
+    "cypress:run": "cypress run",
+    "compare": "node pixelmatch/compareScreenshots.js",
+    "report": "node pixelmatch/index.js",
+    "test": "npm run cypress:run && npm run compare"
   },
   "keywords": [],
   "author": "",
@@ -16,7 +19,9 @@
     "@badeball/cypress-cucumber-preprocessor": "^21.0.2",
     "@bahmutov/cypress-esbuild-preprocessor": "^2.2.3",
     "cypress": "^10.0.0",
-    "pixelmatch": "^6.0.0"
+    "fs-extra": "^11.2.0",
+    "pixelmatch": "^6.0.0",
+    "pngjs": "^7.0.0"
   },
   "cypress-cucumber-preprocessor": {
     "stepDefinitions": [

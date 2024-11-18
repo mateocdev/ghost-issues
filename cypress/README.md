@@ -74,6 +74,29 @@ npx cypress run
 
 Esto ejecutará todas las pruebas en el directorio cypress/e2e.
 
+
+**Ejecución de imagenes con pixel match:**
+
+Para poder ejecutar el script y encontrar la regresion visual ejecutar el siguiente comando:
+
+```bash
+npm run compare
+```
+
+Esto va a generar los screenshots en la carpeta cypress/screenshots
+
+**Ejecución del reporte:**
+
+Para poder ejecutar el script y genere el reporte tiene que ejecutar el siguiente comando:
+
+```bash
+cd pixelmatch && node index.js
+```
+
+Esto va a generar dos archivos en la carpeta cypress el report.html e index.css, ejecute el report.html con chrome.
+
+
+
 ## Estructura del Proyecto
 - cypress/
 
