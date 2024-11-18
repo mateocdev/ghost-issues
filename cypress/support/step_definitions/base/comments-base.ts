@@ -12,6 +12,7 @@ Then("el usuario hace click en editar settings base", () => {
 
 Then("se le da permiso a todos los miembros para comentario base", () => {
   cy.wait(1000);
+  cy.screenshot("comments/1base");
   cy.contains("Save settings").click();
 });
 

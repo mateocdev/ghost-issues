@@ -114,6 +114,17 @@ function runComparison() {
         "../cypress/screenshots/configuration/diff3.png"
       ),
     },
+    {
+      base: path.resolve(
+        __dirname,
+        "../cypress/screenshots/comments/1base.png"
+      ),
+      current: path.resolve(__dirname, "../cypress/screenshots/comments/1.png"),
+      diff: path.resolve(
+        __dirname,
+        "../cypress/screenshots/comments/diff1.png"
+      ),
+    },
   ];
 
   screenshots.forEach(({ base, current, diff }) => {

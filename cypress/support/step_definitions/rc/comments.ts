@@ -12,6 +12,7 @@ Then("el usuario hace click en editar settings", () => {
 
 Then("se le da permiso a todos los miembros para comentario", () => {
   cy.wait(1000);
+  cy.screenshot("comments/1");
   cy.get("[data-testid='access']").find('button:contains("Edit")').click();
 });
 
