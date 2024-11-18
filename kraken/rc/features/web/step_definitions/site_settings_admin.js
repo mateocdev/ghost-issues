@@ -4,6 +4,8 @@ const { captureScreenshot } = require('../helpers/screenshot');
 When('I click on settings menu on sidebar', async function() {
     const element = await this.driver.$('[data-test-nav="settings"]');
     const result = await element.click();
+    // wait for 2 seconds for the settings menu to load
+    await this.driver.pause(2000);
     await captureScreenshot(this.driver, this.scenarioNameSlug, 'click-settings-menu-sidebar');
     return result;
 });

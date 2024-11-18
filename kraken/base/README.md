@@ -13,11 +13,7 @@ Se ha cubierto 10 escenarios de 5 funcionalidades.
 
 ## Requisitos Previos
 
-Antes de comenzar con la instalación, asegúrate de tener lo siguiente instalado en tu sistema:
-
-- [Node.js](https://nodejs.org/) (versión 16 o superior)
-- [npm](https://www.npmjs.com/) (normalmente incluido con Node.js)
-- [Git](https://git-scm.com/)
+Los mismos que se solicitaron anteriormente.
 
 ## Instalación
 
@@ -26,7 +22,6 @@ Sigue estos pasos para configurar el entorno de prueba:
 **Clona este repositorio a tu máquina local:**
 
    ```bash
-   git clone https://github.com/tu-usuario/ghost-issues.git
    cd ghost-issues/kraken/base
    ```
 
@@ -37,7 +32,6 @@ Ejecuta el siguiente comando para instalar Kraken y otras dependencias necesaria
 ```bash
 npm install
 ```
-
 
 ## Ejecución de Pruebas
 Abrir el archivo properties.json (ubicado en la raiz del proyecto) y asegurese de proporcionar:
@@ -62,6 +56,8 @@ Y adicionalmente tomara screenshots utilizando la herramienta BackstopJS
 
 - features/: Contiene todos los archivos de prueba escritos en Gherkin.
    - web/step_definitions: definicion de los diferentes pasos usados en las diferentes escenarios de pruebas.
+   - web/pages: Clases page object.
+   - web/helpers: Utilitarios, como una funcion para capturar screenshots en cada step
    - features/: Archivos de características que describen los escenarios de prueba usando el lenguaje Gherkin.
 - properties.json: Aquí se encuentran los datos que se inyectan a las pruebas, como las credenciales de sign in y la URL.
 
