@@ -1,0 +1,19 @@
+{
+  "name": "kraken",
+  "version": "1.0.0",
+  "description": "Este repositorio contiene un conjunto de pruebas automatizadas para la ABP Ghost utilizando Kraken. Se ha cubierto 10 escenarios de 5 funcionalidades. Estas pruebas automatizadas se realizan a dos versiones del ABP, una version base ZZZ y una RC YYY, durante la implementacion de las pruebas se utilizo como version base Ghost 4.5.0 y como version RC Ghost 5.95.0. En resumen este proyecto contiene:",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "serve-vr-base": "npx http-server base/screenshots -p 8500",
+    "serve-vr-rc": "npx http-server rc/screenshots -p 8501",
+    "start": "node vrtool/index.js"
+  },
+  "author": "Herald Olivares",
+  "license": "MIT",
+  "dependencies": {
+    "backstopjs": "^6.3.25"
+  },
+  "devDependencies": {
+    "http-server": "^14.1.1"
+  }
+}

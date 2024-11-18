@@ -13,20 +13,15 @@ Se ha cubierto 10 escenarios de 5 funcionalidades.
 
 ## Requisitos Previos
 
-Antes de comenzar con la instalación, asegúrate de tener lo siguiente instalado en tu sistema:
-
-- [Node.js](https://nodejs.org/) (versión 16 o superior)
-- [npm](https://www.npmjs.com/) (normalmente incluido con Node.js)
-- [Git](https://git-scm.com/)
+Los mismos que se solicitaron anteriormente.
 
 ## Instalación
 
 Sigue estos pasos para configurar el entorno de prueba:
 
-**Clona este repositorio a tu máquina local:**
+**Ingresa a este directorio dentro del proyecto previamente clonado:**
 
    ```bash
-   git clone https://github.com/tu-usuario/ghost-issues.git
    cd ghost-issues/kraken/rc
    ```
 
@@ -44,7 +39,7 @@ Abrir el archivo properties.json (ubicado en la raiz del proyecto) y asegurese d
 - USERNAME: Nombre de usuario de cuenta administrador de Ghost
 - PASSWORD: Contrasena de la cuenta administrador de Ghost
 - GHOST_URL: URL de la aplicacion Ghost version rc (ej. http://localhost:8081/ghost/#/signin).
-**IMPORTANTE: La version rc a utilizar debe ser Ghost 4.5, las pruebas e2e estan construidas para esa version**
+**IMPORTANTE: La version rc a utilizar debe ser Ghost 5.95.0, las pruebas e2e estan construidas para esa version**
 
 
 **Ejecución en la Interfaz de Usuario de Kraken:**
@@ -56,13 +51,15 @@ Esto abrirá la interfaz gráfica de Kraken, donde puedes ver las pruebas en tie
 ```
 
 Esto ejecutará todas las pruebas que se encuentran en los archivos .feature dentro de la carpeta features.
-Y adicionalmente tomara screenshots utilizando la herramienta BackstopJS
+Y adicionalmente tomara screenshots de cada uno de los steps de los escenarios.
 
 ## Estructura del Proyecto
 - Kraken/rc
 
 - features/: Contiene todos los archivos de prueba escritos en Gherkin.
    - web/step_definitions: definicion de los diferentes pasos usados en las diferentes escenarios de pruebas.
+   - web/pages: Clases page object.
+   - web/helpers: Utilitarios, como una funcion para capturar screenshots en cada step
    - features/: Archivos de características que describen los escenarios de prueba usando el lenguaje Gherkin.
 - properties.json: Aquí se encuentran los datos que se inyectan a las pruebas, como las credenciales de sign in y la URL.
 
