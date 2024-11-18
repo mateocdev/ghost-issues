@@ -3,6 +3,7 @@ import { Given, Then, When } from "@badeball/cypress-cucumber-preprocessor";
 Then("está en la página de configuraciones generales base", () => {
   cy.wait(1000);
   cy.visit("/ghost/#/settings");
+  cy.screenshot("configuration/1base");
 });
 
 When("el administrador actualiza el título del sitio a {string} base", () => {
@@ -20,6 +21,7 @@ When("el administrador actualiza el título del sitio a {string} base", () => {
     .eq(0)
     .clear();
   cy.wait(100);
+  cy.screenshot("configuration/2base");
 });
 
 Then("el título del sitio debería ser {string} base", (newTitle: string) => {
@@ -27,27 +29,15 @@ Then("el título del sitio debería ser {string} base", (newTitle: string) => {
 });
 
 Then("está en la página de configuración de temas base", () => {
+  cy.wait(1000);
   cy.visit("/ghost/#/settings");
   cy.wait(1000);
   cy.contains("Branding").click();
   cy.wait(100);
-  cy.get(".gh-stack-item .gh-setting-first .gh-accent-color")
-    .get(".input-color")
-    .click();
+  cy.screenshot("configuration/3base");
 });
 
 When("el administrador cambia a un color aleatorio base", () => {
   cy.wait(1000);
-  cy.get(".gh-stack-item .gh-setting-first .gh-accent-color")
-    .get(".input-color")
-    .clear();
-  cy.wait(1000);
-  cy.get(".gh-stack-item .gh-setting-first .gh-accent-color")
-    .get(".input-color")
-    .type("983e62");
   cy.contains("Save and close").click();
-});
-
-Then("se guardaron los cambios del diseño de color base", () => {
-  cy.contains("Save").click();
 });

@@ -72,6 +72,48 @@ function runComparison() {
         "../cypress/screenshots/membersGhost/diff3.png"
       ),
     },
+    {
+      base: path.resolve(
+        __dirname,
+        "../cypress/screenshots/configuration/1base.png"
+      ),
+      current: path.resolve(
+        __dirname,
+        "../cypress/screenshots/configuration/1.png"
+      ),
+      diff: path.resolve(
+        __dirname,
+        "../cypress/screenshots/configuration/diff1.png"
+      ),
+    },
+    {
+      base: path.resolve(
+        __dirname,
+        "../cypress/screenshots/configuration/2base.png"
+      ),
+      current: path.resolve(
+        __dirname,
+        "../cypress/screenshots/configuration/2.png"
+      ),
+      diff: path.resolve(
+        __dirname,
+        "../cypress/screenshots/configuration/diff2.png"
+      ),
+    },
+    {
+      base: path.resolve(
+        __dirname,
+        "../cypress/screenshots/configuration/3base.png"
+      ),
+      current: path.resolve(
+        __dirname,
+        "../cypress/screenshots/configuration/3.png"
+      ),
+      diff: path.resolve(
+        __dirname,
+        "../cypress/screenshots/configuration/diff3.png"
+      ),
+    },
   ];
 
   screenshots.forEach(({ base, current, diff }) => {

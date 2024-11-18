@@ -51,6 +51,54 @@ function browser(b) {
           <img class="imgfull" src="./screenshots/membersGhost/diff3.png" alt="Diff Image">
         </div>
       </div>
+<div class="imgline">
+        <div class="imgcontainer">
+          <span class="imgname">rc</span>
+          <img class="img2" src="./screenshots/configuration/1.png" alt="Reference Image">
+        </div>
+        <div class="imgcontainer">
+          <span class="imgname">base</span>
+          <img class="img2" src="./screenshots/configuration/1base.png" alt="Test Image">
+        </div>
+      </div>
+      <div class="imgline">
+        <div class="imgcontainer">
+          <span class="imgname">Diff</span>
+          <img class="imgfull" src="./screenshots/configuration/diff1.png" alt="Diff Image">
+        </div>
+      </div>
+<div class="imgline">
+        <div class="imgcontainer">
+          <span class="imgname">rc</span>
+          <img class="img2" src="./screenshots/configuration/2.png" alt="Reference Image">
+        </div>
+        <div class="imgcontainer">
+          <span class="imgname">base</span>
+          <img class="img2" src="./screenshots/configuration/2base.png" alt="Test Image">
+        </div>
+      </div>
+      <div class="imgline">
+        <div class="imgcontainer">
+          <span class="imgname">Diff</span>
+          <img class="imgfull" src="./screenshots/configuration/diff2.png" alt="Diff Image">
+        </div>
+      </div>
+<div class="imgline">
+        <div class="imgcontainer">
+          <span class="imgname">rc</span>
+          <img class="img2" src="./screenshots/configuration/3.png" alt="Reference Image">
+        </div>
+        <div class="imgcontainer">
+          <span class="imgname">base</span>
+          <img class="img2" src="./screenshots/configuration/3base.png" alt="Test Image">
+        </div>
+      </div>
+      <div class="imgline">
+        <div class="imgcontainer">
+          <span class="imgname">Diff</span>
+          <img class="imgfull" src="./screenshots/configuration/diff3.png" alt="Diff Image">
+        </div>
+      </div>
     </div>`;
 }
 
