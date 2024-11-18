@@ -38,7 +38,7 @@ Abrir el archivo properties.json (ubicado en la raiz del proyecto) y asegurese d
 - USERNAME: Nombre de usuario de cuenta administrador de Ghost
 - PASSWORD: Contrasena de la cuenta administrador de Ghost
 - GHOST_URL: URL de la aplicacion Ghost version base (ej. http://localhost:8080/ghost/#/signin)
-**IMPORTANTE: La version base a utilizar debe ser Ghost 5.95.0, las pruebas e2e estan construidas para esa version**
+**IMPORTANTE: La version base a utilizar debe ser Ghost 4.5.0, las pruebas e2e estan construidas para esa version**
 
 **Ejecución en la Interfaz de Usuario de Kraken:**
 
