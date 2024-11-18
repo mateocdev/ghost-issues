@@ -9,9 +9,9 @@ When(
   (email: string, password: string) => {
     cy.wait(100);
     cy.get("#ember8").type(email);
-    cy.wait(1000);
+    cy.wait(100);
     cy.get("#ember10").type(password);
-    cy.wait(1000);
+    cy.wait(100);
     cy.get("#ember12").click();
   }
 );

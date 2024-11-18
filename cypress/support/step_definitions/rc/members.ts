@@ -5,7 +5,7 @@ Then(
   (name: string) => {
     cy.wait(100);
     cy.visit("/ghost/#/members");
-    cy.screenshot();
+    cy.screenshot("membersGhost/1");
     cy.wait(100);
     cy.get("[data-test-new-member-button='true']").click();
     cy.wait(100);
@@ -14,7 +14,7 @@ Then(
     cy.get("[data-test-input='member-email']").type(
       Math.floor(Math.random() * 100000) + "@example.com"
     );
-    cy.screenshot();
+    cy.screenshot("membersGhost/2");
     cy.get("[data-test-button='save']").click();
   }
 );
@@ -23,6 +23,7 @@ Then("el administrador debería ver el miembro creado", () => {
   cy.wait(100);
   cy.visit("/ghost/#/members");
   cy.get('[data-test-input="members-search"]').click().type("Joe Doe");
+  cy.screenshot("membersGhost/3");
   cy.wait(100);
   cy.contains("Joe Doe").should("be.visible");
 });
