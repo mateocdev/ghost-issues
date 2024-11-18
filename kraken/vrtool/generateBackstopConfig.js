@@ -10,7 +10,11 @@ function generateBackstopConfig(outputDir) {
   const scenarios = fs.readdirSync(rcDir).map((scenarioFolder) => {
     // iterate over each scenario folder
     const rcScenarioPath = path.join(rcDir, scenarioFolder);
-    // const baseScenarioPath = path.join(baseDir, scenarioFolder);
+    // iterate over each image in the scenario folder
+    // each image is a step in the scenario and a scenario in backstop
+    // the reference image is the one from the base version
+    // the test image is the one from the rc version
+    // finally return the scenario object for backstop
     return fs.readdirSync(rcScenarioPath).map((image) => {
       const rcPath = `${rcStepsScreenshotsUrl}/${scenarioFolder}/${image}`;
       const basePath = `${baseStepsScreenshotsUrl}/${scenarioFolder}/${image}`;
