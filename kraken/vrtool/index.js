@@ -6,13 +6,13 @@ const { generateBackstopConfig } = require("./generateBackstopConfig");
   const config = generateBackstopConfig(outputDir);
 
   try {
-    // Generar las referencias visuales de las pruebas usando la versión base
+    // generate visual regression reference images
     await backstop("reference", { config });
-    // Ejecutar las pruebas visuales
-    console.log("Ejecutando pruebas de regresión visual...");
+    // run visual regression tests
+    console.log("Running visual regression tests...");
     await backstop("test", { config });
-    console.log("Pruebas completadas. Generando reporte...");
+    console.log("Visual regression tests completed successfully.");
   } catch (error) {
-    console.error("Error durante las pruebas de regresión visual:", error);
+    console.error("Error running the regression tests: ", error);
   }
 })();
