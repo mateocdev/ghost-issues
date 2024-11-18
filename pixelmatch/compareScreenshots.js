@@ -125,6 +125,41 @@ function runComparison() {
         "../cypress/screenshots/comments/diff1.png"
       ),
     },
+    {
+      base: path.resolve(__dirname, "../cypress/screenshots/post/4base.png"),
+      current: path.resolve(__dirname, "../cypress/screenshots/post/4.png"),
+      diff: path.resolve(__dirname, "../cypress/screenshots/post/diff4.png"),
+    },
+    {
+      base: path.resolve(__dirname, "../cypress/screenshots/post/1base.png"),
+      current: path.resolve(__dirname, "../cypress/screenshots/post/1.png"),
+      diff: path.resolve(__dirname, "../cypress/screenshots/post/diff1.png"),
+    },
+    {
+      base: path.resolve(__dirname, "../cypress/screenshots/post/2base.png"),
+      current: path.resolve(__dirname, "../cypress/screenshots/post/2.png"),
+      diff: path.resolve(__dirname, "../cypress/screenshots/post/diff2.png"),
+    },
+    {
+      base: path.resolve(__dirname, "../cypress/screenshots/post/3base.png"),
+      current: path.resolve(__dirname, "../cypress/screenshots/post/3.png"),
+      diff: path.resolve(__dirname, "../cypress/screenshots/post/diff3.png"),
+    },
+    {
+      base: path.resolve(__dirname, "../cypress/screenshots/tags/3base.png"),
+      current: path.resolve(__dirname, "../cypress/screenshots/tags/3.png"),
+      diff: path.resolve(__dirname, "../cypress/screenshots/tags/diff3.png"),
+    },
+    {
+      base: path.resolve(__dirname, "../cypress/screenshots/tags/2base.png"),
+      current: path.resolve(__dirname, "../cypress/screenshots/tags/2.png"),
+      diff: path.resolve(__dirname, "../cypress/screenshots/tags/diff2.png"),
+    },
+    {
+      base: path.resolve(__dirname, "../cypress/screenshots/tags/1base.png"),
+      current: path.resolve(__dirname, "../cypress/screenshots/tags/1.png"),
+      diff: path.resolve(__dirname, "../cypress/screenshots/tags/diff1.png"),
+    },
   ];
 
   screenshots.forEach(({ base, current, diff }) => {

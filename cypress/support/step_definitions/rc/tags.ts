@@ -16,10 +16,12 @@ When("el administrador crea una nueva etiqueta {string}", (tagName: string) => {
   cy.get("[data-test-button='save']").click();
   cy.wait(1000);
   cy.get("[data-test-nav='tags']").click();
+  cy.screenshot("tags/1");
 });
 
 Then("la etiqueta debería aparecer en la lista de etiquetas", () => {
   cy.contains("Etiqueta de Prueba").should("exist");
+  cy.screenshot("tags/2");
 });
 
 Then("se agrega una etiqueta a la publicacion {string}", (tagName: string) => {
@@ -28,4 +30,5 @@ Then("se agrega una etiqueta a la publicacion {string}", (tagName: string) => {
   cy.wait(1000);
   cy.get(".ember-power-select-trigger-multiple-input").eq(0).type(tagName);
   cy.wait(100);
+  cy.screenshot("tags/3");
 });

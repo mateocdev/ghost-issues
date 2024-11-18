@@ -40,6 +40,7 @@ class PostPage {
     cy.get(this.titleInput).type(title);
     cy.wait(1000);
     cy.get(this.contentInput).type(content);
+    cy.screenshot("post/1");
   }
 
   public savePost(): void {
@@ -49,6 +50,7 @@ class PostPage {
   public verifyPostInList(title: string): void {
     cy.wait(1000);
     cy.get(this.postsList).contains(title).should("be.visible");
+    cy.screenshot("post/2");
   }
 
   public publishPost(): void {
@@ -60,6 +62,7 @@ class PostPage {
     cy.get('[data-test-task-button-state="idle"]').click();
     cy.wait(1000);
     cy.get('[data-test-button="close-publish-flow"]').click();
+    cy.screenshot("post/3");
   }
 
   public unpublishPost(): void {
@@ -70,6 +73,7 @@ class PostPage {
     cy.get('[data-test-button="revert-to-draft"]').click();
     cy.wait(1000);
     cy.contains("Publish").should("be.visible");
+    cy.screenshot("post/4");
   }
 }
 
