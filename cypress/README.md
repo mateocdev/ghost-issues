@@ -74,6 +74,9 @@ npx cypress run
 
 Esto ejecutará todas las pruebas en el directorio cypress/e2e.
 
+**Explicacion pixel match:**
+
+- [Ejecuccion de pixel match](https://github.com/mateocdev/ghost-issues/blob/master/pixelmatch/README.md)
 
 **Ejecución de imagenes con pixel match:**
 
