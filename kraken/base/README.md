@@ -19,7 +19,7 @@ Los mismos que se solicitaron anteriormente.
 
 Sigue estos pasos para configurar el entorno de prueba:
 
-**Clona este repositorio a tu máquina local:**
+**Ingresa a este directorio dentro del proyecto previamente clonado:**
 
    ```bash
    cd ghost-issues/kraken/base
