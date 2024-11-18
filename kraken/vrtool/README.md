@@ -1,4 +1,4 @@
-# Proyecto de Pruebas Automatizadas con Kraken
+# VRTOOL (script para ejecutar pruebas de regresion visual con BackstopJS utilizando como data imagenes previamente capturadas en pruebas e2e)
 
 Este script fue creado para que despues de tomar capturas de pantalla de todos los steps de las pruebas
 e2e para la version base y rc, se puede ejecutar BackstopJS al final generando el reporte de regresion visual.
