@@ -68,9 +68,6 @@ Itera los directorios dentro de esa carpeta para saber cuales son los escenarios
 Luego de leer los folder de los escenarios, se lee las imagenes una por una, con cada imagen creamos dinámicamente los escenarios para BackstopJS, y estos son inyectados dinamicamente en el archivo de configuración y proporcionados
 programaticamente a BackstopJS al invocar a su comando reference y test (para que ejecute las pruebas de regresion visuales).
 
-# 3. Ejecutar la prueba de regresion visual
-Como BackstopJS solo es capaz de ejecutar la prueba si se le proporciona el escenario mediante una URL, tanto lo que va probar como la referencia. Por ese motivo usando un local server las imagenes capturadas se sirven mediante 2 local servers solo durante la ejecucion de la prueba de regresion visual.
-
 vrtool/generateBackstopConfig.js
 ```javascript
 const fs = require("fs");
@@ -110,6 +107,9 @@ function generateBackstopConfig(outputDir) {
 
 module.exports = { generateBackstopConfig };
 ```
+
+# 3. Ejecutar la prueba de regresion visual
+Como BackstopJS solo es capaz de ejecutar la prueba si se le proporciona el escenario mediante una URL, tanto lo que va probar como la referencia. Por ese motivo usando un local server las imagenes capturadas se sirven mediante 2 local servers solo durante la ejecucion de la prueba de regresion visual.
 
 Script que ejecuta la prueba de regresion visual usando BackstopJS
 vrtool/index.js
