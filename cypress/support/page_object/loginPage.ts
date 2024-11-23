@@ -1,6 +1,6 @@
 class LoginPage {
-  visit() {
-    cy.visit("http://localhost:3001/ghost/#/signin");
+  visit(url: string) {
+    cy.visit(url);
   }
 
   enterEmail(email) {
