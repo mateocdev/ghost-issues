@@ -2,7 +2,7 @@ Feature: Administracion de Publicaciones
 
 Scenario: Crear una nueva publicacion como administrador
   Given el administrador esta en la pagina de inicio de sesion
-  When el administrador ingresa un correo "mateo.castano1@yahoo.com" y una contraseña "1qa2w3ed$%"
+  When el administrador ingresa un correo "mateo.castano1@yahoo.com" y una contraseña "1022389881"
   And hace clic en el botón de inicio de sesión
   Then el administrador debería ver el panel de control
   Then hace clic en el boton de new post
@@ -14,7 +14,7 @@ Scenario: Crear una nueva publicacion como administrador
 
 Scenario: Publicar y despublicar una entrada como administrador
   Given el administrador esta en la pagina de inicio de sesion
-  When el administrador ingresa un correo "mateo.castano1@yahoo.com" y una contraseña "1qa2w3ed$%"
+  When el administrador ingresa un correo "mateo.castano1@yahoo.com" y una contraseña "1022389881"
   And hace clic en el botón de inicio de sesión
   Then el administrador debería ver el panel de control
   Then hace clic en el boton de new post
@@ -26,7 +26,7 @@ Scenario: Publicar y despublicar una entrada como administrador
 
 Scenario: Crear una nueva publicacion como administrador base
   Given el administrador esta en la pagina de inicio de sesion base
-  When el administrador ingresa un correo "mateo.castano1@yahoo.com" y una contraseña "1qa2w3ed$%" base
+  When el administrador ingresa un correo "mateo.castano1@yahoo.com" y una contraseña "1022389881" base
   And hace clic en el botón de inicio de sesión base
   Then hace clic en el boton de new post base
   When el administrador puede ver la seccion de crear post base
@@ -37,7 +37,7 @@ Scenario: Crear una nueva publicacion como administrador base
 
 Scenario: Publicar y despublicar una entrada como administrador base
   Given el administrador esta en la pagina de inicio de sesion base
-  When el administrador ingresa un correo "mateo.castano1@yahoo.com" y una contraseña "1qa2w3ed$%" base
+  When el administrador ingresa un correo "mateo.castano1@yahoo.com" y una contraseña "1022389881" base
   And hace clic en el botón de inicio de sesión base
   Then hace clic en el boton de new post base
   When el administrador puede ver la seccion de crear post base

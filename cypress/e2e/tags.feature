@@ -2,7 +2,7 @@ Feature: Administración de Etiquetas
 
 Scenario: Crear una nueva etiqueta como administrador
   Given el administrador esta en la pagina de inicio de sesion
-  When el administrador ingresa un correo "mateo.castano1@yahoo.com" y una contraseña "1qa2w3ed$%"
+  When el administrador ingresa un correo "mateo.castano1@yahoo.com" y una contraseña "1022389881"
   And hace clic en el botón de inicio de sesión
   And el administrador está en la página de etiquetas
   When el administrador crea una nueva etiqueta "Etiqueta de Prueba"
@@ -10,7 +10,7 @@ Scenario: Crear una nueva etiqueta como administrador
 
 Scenario: Asignar una etiqueta a una publicación como administrador
   Given el administrador esta en la pagina de inicio de sesion
-  When el administrador ingresa un correo "mateo.castano1@yahoo.com" y una contraseña "1qa2w3ed$%"
+  When el administrador ingresa un correo "mateo.castano1@yahoo.com" y una contraseña "1022389881"
   And hace clic en el botón de inicio de sesión
   And el administrador tiene una publicación existente
   Then hace clic en el boton de new post
@@ -23,7 +23,7 @@ Scenario: Asignar una etiqueta a una publicación como administrador
 
 Scenario: Crear una nueva etiqueta como administrador base
   Given el administrador esta en la pagina de inicio de sesion base
-  When el administrador ingresa un correo "mateo.castano1@yahoo.com" y una contraseña "1qa2w3ed$%" base
+  When el administrador ingresa un correo "mateo.castano1@yahoo.com" y una contraseña "1022389881" base
   And hace clic en el botón de inicio de sesión base
   And el administrador está en la página de etiquetas base
   When el administrador crea una nueva etiqueta "Etiqueta de Prueba" base
@@ -31,7 +31,7 @@ Scenario: Crear una nueva etiqueta como administrador base
 
 Scenario: Asignar una etiqueta a una publicación como administrador base
   Given el administrador esta en la pagina de inicio de sesion base
-  When el administrador ingresa un correo "mateo.castano1@yahoo.com" y una contraseña "1qa2w3ed$%" base
+  When el administrador ingresa un correo "mateo.castano1@yahoo.com" y una contraseña "1022389881" base
   And hace clic en el botón de inicio de sesión base
   And el administrador tiene una publicación existente base
   Then hace clic en el boton de new post base

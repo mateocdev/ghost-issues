@@ -35,11 +35,8 @@ Sigue estos pasos para configurar el entorno de prueba:
 - Asegurate de que ghost este corriendo localmente en el puerto http://localhost:2368/ para la version rc
 - Para la version base corre el comando 
 ```bash
-docker run --name my-ghost -e url=http://localhost:3001 -p 3001:2368 ghost:4.5
+docker run --name my-ghost -e url=http://localhost:3001 -p 3001:2368 ghost:5.96
 ```
-- Se recomienda usar docker para la version 4.5
-- Para la version 4.5 es obligatorio usar el puerto 3001
-- Crea un perfil de administrador con los siguientes credenciales: mateo.castano1@yahoo.com , password: 1qa2w3ed$%
 
 
 **Instala las dependencias del proyecto:**
@@ -55,6 +52,12 @@ npm install
 Una vez que hayas instalado las dependencias, puedes ejecutar las pruebas de las siguientes maneras:
 
 **Ejecución en la Interfaz de Usuario de Cypress:**
+
+Instala cypress si no lo tienes instalado
+
+```bash
+npm install cypress --save-dev
+```
 
 Esto abrirá la interfaz gráfica de Cypress, donde puedes ver las pruebas en tiempo real.
 
