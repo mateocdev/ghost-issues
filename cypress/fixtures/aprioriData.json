@@ -4,8 +4,8 @@
   "password": "1022389881",
   "newMember": [
     {
-      "name": "Mateo",
-      "email": "mateo.castano111@yahoo.com",
+      "name": "Mateoo",
+      "email": "mateo.castano@yahoo.com",
       "note": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis laoreet luctus dolor, et laoreet purus condimentum id. Vivamus ligula ligula, iaculis vitae enim ac, venenatis facilisis nisi. Sed sagittis commodo lectus eget varius. Phasellus felis turpis, faucibus eu est ac, varius elementum est. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur luctus tincidunt justo nec efficitur. hola amigos como estan",
       "errorNote": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis laoreet luctus dolor, et laoreet purus condimentum id. Vivamus ligula ligula, iaculis vitae enim ac, venenatis facilisis nisi. Sed sagittis commodo lectus eget varius. Phasellus felis turpis, faucibus eu est ac, varius elementum est. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur luctus tincidunt justo nec efficitur. Quisque eget vulputate enim, ac porta odio. Sed commodo ultrices pellentesque. Quisque gravida malesuada volutpat. Ut vitae enim eu lorem blandit convallis id eu velit. Nullam imperdiet vitae massa at ornare. Etiam varius volutpat egestas. Sed porta lorem at sagittis lacinia. Proin non quam et tortor vestibulum finibus vel nec eros. Aliquam interdum ex et urna pulvinar, vel dictum urna congue. Nulla quis dapibus turpis, bibendum interdum lectus."
     },
@@ -27,7 +27,7 @@
   "urlNewsletter": "http://localhost:3001/ghost/#/settings/newsletters",
   "news": [
     {
-      "name": "Newsletter1111",
+      "name": "Newsletter",
       "description": "Description1"
     }
   ],
@@ -37,7 +37,7 @@
     {
       "title": "Title1",
       "description": "Description1",
-      "emailStaff": "m.castano1@uniandes.edu.co"
+      "emailStaff": "m.castano11@uniandes.edu.co"
     }
   ]
 }
