@@ -28,8 +28,13 @@ class Members {
     cy.get('[data-test-member-settings-switch]').find('span').click();
   }
 
-  public fillNoteForm(data: any): void {
-    cy.get('[data-test-input="member-note"]').type(data[0].note);
+  public fillNoteForm(data: any, hasError?: boolean): void {
+    if (hasError) cy.get('[data-test-input="member-note"]').type(data[0].errorNote);
+    else cy.get('[data-test-input="member-note"]').type(data[0].note);
+  }
+
+  public getErrorSaveNote(): void {
+    cy.get('[data-test-button="save"]').contains('Retry');
   }
 }
 

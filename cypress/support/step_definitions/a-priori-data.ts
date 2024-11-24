@@ -107,3 +107,12 @@ When('el administrador hace click en el botón de guardar configuracion', functi
 Then('el administrador modifica la nota del miembro', function(){
   Members.fillNoteForm(this.data.newMember);
 });
+
+
+Then('el administrador modifica la nota del miembro y agrega mas de 500 caracteres', function(){
+  Members.fillNoteForm(this.data.newMember, true);
+});
+
+Then('el administrador debe ver un error de que la nota no puede tener mas de 500 caracteres', function(){
+  Members.getErrorSaveNote();
+});
