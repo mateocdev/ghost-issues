@@ -36,6 +36,11 @@ class Members {
   public getErrorSaveNote(): void {
     cy.get('[data-test-button="save"]').contains('Retry');
   }
+
+  public fillModifyMemberForm(data: any): void {
+    cy.get('[data-test-input="member-name"]').clear().type(data[1].name);
+    cy.get('[data-test-input="member-email"]').clear().type(data[1].email);
+  }
 }
 
 export default new Members();

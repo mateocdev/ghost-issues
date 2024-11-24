@@ -119,8 +119,6 @@ Then('el administrador debe ver un error de que la nota no puede tener mas de 50
 });
 
 // Scenario: APD-08 Actualizar informacion de un tag y verificar la actualizacion
-
-
 Then('el administrador hace click en el tag existente', function(){
   tags.clickTag(this.data.tags);
 });
@@ -128,4 +126,31 @@ Then('el administrador hace click en el tag existente', function(){
 
 Then('el administrador modifica la informacion del tag', function(){
   tags.fillModifyTagForm(this.data.tags);
+});
+
+// Scenario: APD-09 Agregar staff como contribuidor a la plataforma
+
+
+When('el administrador ingresa a la pagina de staff', function(){
+    settings.visitStaffPage(this.data.staffUrl);
+});
+
+Then('el administrador hace click en invitar gente', function(){
+  settings.clickInvitePeople();
+});
+
+Then('el administrador ingresa un correo y selecciona role de contribuidor', function(){
+  settings.fillInvitePeopleForm(this.data.settings);
+});
+
+
+Then('el administrador hace click en el botón de invitar', function(){
+  settings.clickSaveInvitation();
+});
+
+// Scenario: APD-10 Modificar la información de un miembro y verificar el cambio
+
+
+Then('el administrador modifica la informacion del miembro', function(){
+  Members.fillModifyMemberForm(this.data.newMember);
 });

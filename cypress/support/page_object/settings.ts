@@ -15,6 +15,22 @@ class Settings {
   public clickSaveSettings(): void {
     cy.get('[data-testid="title-and-description"]').find('button').contains('Save').click();
   }
+
+  public visitStaffPage(url: string): void {
+    cy.visit(url)
+  }
+
+  public clickInvitePeople(): void {
+    cy.get('[data-testid="users"]').find('button').contains('Invite people').click();
+  }
+
+  public fillInvitePeopleForm(data: any): void {
+    cy.get('[data-testid="invite-user-modal"]').find('input').type(data[0].emailStaff);
+  }
+
+ public clickSaveInvitation(): void {
+    cy.get('[data-testid="invite-user-modal"]').find('button').contains('Send invitation').click();
+  }
 }
 
 export default new Settings();
