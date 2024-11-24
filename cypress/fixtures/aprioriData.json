@@ -1,5 +1,12 @@
 {
-  "url": "http://localhost:3001/ghost/#/signin",
+  "url": "http://localhost:2368/ghost/#/signin",
   "email": "mateo.castano1@yahoo.com",
-  "password": "1022389881"
+  "password": "1022389881",
+  "membersUrl": "/ghost/#/members",
+  "newMember": [
+    {
+      "name": "Mateo",
+      "email": "mateo.castano11@yahoo.com"
+    }
+  ]
 }
