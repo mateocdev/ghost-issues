@@ -19,6 +19,14 @@ class Members {
   public showMemberCreated(): void {
     cy.get('[data-test-table="members"]').should('be.visible');
   }
+
+  public clickMember(data: any): void {
+    cy.get('[data-test-table="members"]').contains(data[0].name).click();
+  }
+
+  public deactivateSubscription(): void {
+    cy.get('[data-test-member-settings-switch]').find('span').click();
+  }
 }
 
 export default new Members();
