@@ -1,5 +1,5 @@
 class Members {
-  public visitMembersPage(url: string): void {
+  public visitMembersPage(): void {
     cy.get('[data-test-nav="members"]').click()
   }
 
