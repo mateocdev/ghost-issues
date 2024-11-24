@@ -18,7 +18,7 @@ Cypress.on('uncaught:exception', (err, runnable) => {
 
 // Scenario: PDAD-02 Crear un tag aleatorio y validar su creacion
 
-Then('el administrador ingresa los datos del nuevo tag aleatorio', function(){
+Then('el administrador ingresa los datos del nuevo tag con faker', function(){
   tags.fillNewTagFormPDAD();
 });
 
