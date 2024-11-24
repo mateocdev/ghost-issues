@@ -70,3 +70,37 @@ Feature: A-Priori Data
 #   Then el administrador modifica la nota del miembro y agrega mas de 500 caracteres
 #   Then el administrador hace click en el botón de guardar
 #   Then el administrador debe ver un error de que la nota no puede tener mas de 500 caracteres
+
+
+Scenario: APD-08 Actualizar informacion de un tag y verificar la actualizacion
+  Given el administrador esta en la pagina de inicio de sesion
+  When el administrador ingresa un correo y una contraseña
+  When hace clic en el botón de inicio de sesión
+  When el administrador ingresa a la pagina de tags
+  Then el administrador hace click en el tag existente
+  Then el administrador modifica la informacion del tag
+  Then el administrador hace click en el botón de guardar
+  Then el administrador ingresa a la pagina de tags
+
+# Scenario: APD-09 Agregar staff como contribuidor a la plataforma
+#   Given el administrador esta en la pagina de inicio de sesion
+#   When el administrador ingresa un correo y una contraseña
+#   When hace clic en el botón de inicio de sesión
+#   When el administrador ingresa a la pagina de miembros
+#   Then el administrador hace click en el miembro existente
+#   Then el administrador agrega el rol de contribuidor al miembro
+#   Then el administrador hace click en el botón de guardar
+#   Then el administrador ingresa a la pagina de miembros
+#   Then el administrador deberia ver el miembro con el rol de contribuidor
+
+
+# Scenario: APD-10 Modificar la información de un miembro y verificar el cambio
+#   Given el administrador esta en la pagina de inicio de sesion
+#   When el administrador ingresa un correo y una contraseña
+#   When hace clic en el botón de inicio de sesión
+#   When el administrador ingresa a la pagina de miembros
+#   Then el administrador hace click en el miembro existente
+#   Then el administrador modifica la informacion del miembro
+#   Then el administrador hace click en el botón de guardar
+#   Then el administrador ingresa a la pagina de miembros
+#   Then el administrador deberia ver el miembro actualizado en la lista de miembros

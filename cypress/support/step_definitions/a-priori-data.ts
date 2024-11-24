@@ -117,3 +117,15 @@ Then('el administrador modifica la nota del miembro y agrega mas de 500 caracter
 Then('el administrador debe ver un error de que la nota no puede tener mas de 500 caracteres', function(){
   Members.getErrorSaveNote();
 });
+
+// Scenario: APD-08 Actualizar informacion de un tag y verificar la actualizacion
+
+
+Then('el administrador hace click en el tag existente', function(){
+  tags.clickTag(this.data.tags);
+});
+
+
+Then('el administrador modifica la informacion del tag', function(){
+  tags.fillModifyTagForm(this.data.tags);
+});

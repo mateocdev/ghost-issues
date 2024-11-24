@@ -14,7 +14,10 @@
   "tags": [
     {
       "nameTag": "Tag1",
-      "descriptionTag": "Description"
+      "descriptionTag": "Description",
+      "newNameTag": "Tag2",
+      "newDescriptionTag": "Description2"
+
     }
   ],
   "urlNewsletter": "http://localhost:3001/ghost/#/settings/newsletters",
