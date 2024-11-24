@@ -21,5 +21,12 @@
       "name": "Newsletter1111",
       "description": "Description1"
     }
+  ],
+  "settingsUrl": "http://localhost:3001/ghost/#/settings",
+  "settings": [
+    {
+      "title": "Title1",
+      "description": "Description1"
+    }
   ]
 }

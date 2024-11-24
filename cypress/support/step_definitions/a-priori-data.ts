@@ -1,6 +1,7 @@
 import { Then, When } from "@badeball/cypress-cucumber-preprocessor";
 import Members from "../page_object/members";
 import newsletter from "../page_object/newsletter";
+import settings from "../page_object/settings";
 import tags from "../page_object/tags";
 
 beforeEach(function () {
@@ -64,7 +65,7 @@ Then('el administrador desactiva la suscripción del miembro', function(){
 });
 
 
-// Scenarios: APD-04 Crear un newsletter y verificar su existencia.
+// Scenario: APD-04 Crear un newsletter y verificar su existencia.
 
 When("el administrador ingresa a la pagina de newsletters", function () {
   newsletter.visitNewsletterPage(this.data.urlNewsletter);
@@ -86,4 +87,17 @@ When('el administrador hace click en el botón de guardar newsletter', function(
   newsletter.clickSaveNewsletter();
 });
 
+// Scenario: APD-05 Modificar el titulo y la descripcion del sitio
 
+When("el administrador ingresa a la pagina de configuracion", function () {
+  settings.visitSettingsPage(this.data.settingsUrl);
+});
+
+Then("el administrador modifica el titulo y la descripcion del sitio", function () {
+  settings.clickEditTitleDescription();
+  settings.fillNewTitleForm(this.data.settings);
+});
+
+When('el administrador hace click en el botón de guardar configuracion', function(){
+  settings.clickSaveSettings();
+});
