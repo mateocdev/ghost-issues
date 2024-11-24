@@ -5,7 +5,8 @@
   "newMember": [
     {
       "name": "Mateo",
-      "email": "mateo.castano111@yahoo.com"
+      "email": "mateo.castano111@yahoo.com",
+      "note": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis laoreet luctus dolor, et laoreet purus condimentum id. Vivamus ligula ligula, iaculis vitae enim ac, venenatis facilisis nisi. Sed sagittis commodo lectus eget varius. Phasellus felis turpis, faucibus eu est ac, varius elementum est. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur luctus tincidunt justo nec efficitur."
     }
   ],
   "urlTag": "http://localhost:3001/ghost/#/tags/new",

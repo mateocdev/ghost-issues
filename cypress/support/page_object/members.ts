@@ -27,6 +27,10 @@ class Members {
   public deactivateSubscription(): void {
     cy.get('[data-test-member-settings-switch]').find('span').click();
   }
+
+  public fillNoteForm(data: any): void {
+    cy.get('[data-test-input="member-note"]').type(data[0].note);
+  }
 }
 
 export default new Members();

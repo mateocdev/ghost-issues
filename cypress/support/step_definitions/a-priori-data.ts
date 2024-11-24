@@ -101,3 +101,9 @@ Then("el administrador modifica el titulo y la descripcion del sitio", function 
 When('el administrador hace click en el botón de guardar configuracion', function(){
   settings.clickSaveSettings();
 });
+
+// Scenario: APD-06 Modificar a un usuario y agregarle 500 caracteres en nota el maximo permitido
+
+Then('el administrador modifica la nota del miembro', function(){
+  Members.fillNoteForm(this.data.newMember);
+});

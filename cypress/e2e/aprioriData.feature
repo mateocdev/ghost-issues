@@ -49,3 +49,14 @@ Feature: A-Priori Data
 #   When el administrador ingresa a la pagina de configuracion
 #   Then el administrador modifica el titulo y la descripcion del sitio
 #   When el administrador hace click en el botón de guardar configuracion
+
+
+Scenario: APD-06 Modificar a un usuario y agregarle 500 caracteres en nota el maximo permitido
+  Given el administrador esta en la pagina de inicio de sesion
+  When el administrador ingresa un correo y una contraseña
+  When hace clic en el botón de inicio de sesión
+  When el administrador ingresa a la pagina de miembros
+  Then el administrador hace click en el miembro existente
+  Then el administrador modifica la nota del miembro
+  Then el administrador hace click en el botón de guardar
+  Then el administrador ingresa a la pagina de miembros
