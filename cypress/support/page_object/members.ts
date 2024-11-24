@@ -1,3 +1,4 @@
+import { faker } from '@faker-js/faker';
 class Members {
   public visitMembersPage(): void {
     cy.get('[data-test-nav="members"]').click()
@@ -41,6 +42,16 @@ class Members {
     cy.get('[data-test-input="member-name"]').clear().type(data[1].name);
     cy.get('[data-test-input="member-email"]').clear().type(data[1].email);
   }
+
+
+  // pseudo aleatorio con faker
+
+  public fillNewMemberFormPDAD(): void {
+    cy.get("[data-test-input='member-name']").type(faker.person.firstName());
+    cy.get("[data-test-input='member-email']").type(faker.internet.email());
+  }
+
+  
 }
 
 export default new Members();

@@ -19,6 +19,7 @@
   "dependencies": {
     "@badeball/cypress-cucumber-preprocessor": "^21.0.2",
     "@bahmutov/cypress-esbuild-preprocessor": "^2.2.3",
+    "@faker-js/faker": "^9.2.0",
     "fs-extra": "^11.2.0",
     "pixelmatch": "^6.0.0",
     "pngjs": "^7.0.0"
