@@ -1,6 +1,6 @@
-Feature: Administración de comentarios
+Feature: A-Priori Data
 
-Scenario: Ver la lista de comentarios en la sección de administrador
+Scenario: APD-01 Crear un usuario con rol específico y validar su creación
   Given el administrador esta en la pagina de inicio de sesion
   When el administrador ingresa un correo y una contraseña
   When hace clic en el botón de inicio de sesión
