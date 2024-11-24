@@ -14,5 +14,12 @@
       "nameTag": "Tag1",
       "descriptionTag": "Description"
     }
+  ],
+  "urlNewsletter": "http://localhost:3001/ghost/#/settings/newsletters",
+  "news": [
+    {
+      "name": "Newsletter1111",
+      "description": "Description1"
+    }
   ]
 }

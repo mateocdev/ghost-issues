@@ -1,5 +1,6 @@
 import { Then, When } from "@badeball/cypress-cucumber-preprocessor";
 import Members from "../page_object/members";
+import newsletter from "../page_object/newsletter";
 import tags from "../page_object/tags";
 
 beforeEach(function () {
@@ -60,6 +61,29 @@ Then("el administrador hace click en el miembro existente", function () {
 
 Then('el administrador desactiva la suscripción del miembro', function(){
   Members.deactivateSubscription();
+});
+
+
+// Scenarios: APD-04 Crear un newsletter y verificar su existencia.
+
+When("el administrador ingresa a la pagina de newsletters", function () {
+  newsletter.visitNewsletterPage(this.data.urlNewsletter);
+});
+
+Then("el administrador hace click en nuevo newsletter", function () {
+  newsletter.clickNewNewsletterButton();
+});
+
+Then("el administrador ingresa los datos del nuevo newsletter", function () {
+  newsletter.fillNewNewsletterForm(this.data.news);
+});
+
+Then('el administrador deberia ver el nuevo newsletter en la lista de newsletters', function(){
+  newsletter.showNewsletterCreated();
+});
+
+When('el administrador hace click en el botón de guardar newsletter', function(){
+  newsletter.clickSaveNewsletter();
 });
 
 
