@@ -61,7 +61,7 @@ Feature: A-Priori Data
 #   Then el administrador hace click en el botón de guardar
 #   Then el administrador ingresa a la pagina de miembros
 
-# Scenario: APD-06 Modificar a un usuario y agregarle mas de 500 caracteres que no son los permitidos.
+# Scenario: APD-07 Modificar a un usuario y agregarle mas de 500 caracteres que no son los permitidos.
 #   Given el administrador esta en la pagina de inicio de sesion
 #   When el administrador ingresa un correo y una contraseña
 #   When hace clic en el botón de inicio de sesión

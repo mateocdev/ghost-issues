@@ -108,6 +108,7 @@ Then('el administrador modifica la nota del miembro', function(){
   Members.fillNoteForm(this.data.newMember);
 });
 
+// APD-07 Modificar a un usuario y agregarle mas de 500 caracteres que no son los permitidos.
 
 Then('el administrador modifica la nota del miembro y agrega mas de 500 caracteres', function(){
   Members.fillNoteForm(this.data.newMember, true);
