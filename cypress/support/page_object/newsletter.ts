@@ -24,10 +24,10 @@ class NewsLetter {
   public fillNewNewsletterFormPDAD(): void {
     cy.get('[data-testid="add-newsletter-modal"]')
       .find("input")
-      .type(faker.lorem.word());
+      .type(faker.vehicle.vehicle());
     cy.get('[data-testid="add-newsletter-modal"]')
       .find("textarea")
-      .type(faker.lorem.sentence());
+      .type(faker.internet.emoji());
     cy.get('[data-testid="add-newsletter-modal"]')
       .find("button")
       .contains("Create")

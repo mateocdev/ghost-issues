@@ -35,6 +35,10 @@ class Members {
     else cy.get('[data-test-input="member-note"]').type(data[0].note);
   }
 
+  public fillNoteFormPAPD(): void {
+    cy.get("[data-test-input='member-note']").type(faker.lorem.paragraph());
+  }
+
   public getErrorSaveNote(): void {
     cy.get('[data-test-button="save"]').contains("Retry");
   }

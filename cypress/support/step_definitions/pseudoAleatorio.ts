@@ -46,26 +46,23 @@ Then(
   }
 );
 
-// // Scenario: APD-05 Modificar el titulo y la descripcion del sitio
+// Scenario: PAPD-05 Modificar el titulo y la descripcion del sitio con nombres aleatorios
 
-// When("el administrador ingresa a la pagina de configuracion", function () {
-//   settings.visitSettingsPage(this.data.settingsUrl);
-// });
+Then(
+  "el administrador modifica el titulo y la descripcion del sitio aleatorio",
+  function () {
+    settings.clickEditTitleDescription();
+    settings.fillNewTitleFormPDAD();
+  }
+);
 
-// Then("el administrador modifica el titulo y la descripcion del sitio", function () {
-//   settings.clickEditTitleDescription();
-//   settings.fillNewTitleForm(this.data.settings);
-// });
-
-// When('el administrador hace click en el botón de guardar configuracion', function(){
-//   settings.clickSaveSettings();
-// });
-
-// // Scenario: APD-06 Modificar a un usuario y agregarle 500 caracteres en nota el maximo permitido
-
-// Then('el administrador modifica la nota del miembro', function(){
-//   Members.fillNoteForm(this.data.newMember);
-// });
+// Scenario: PAPD-06 Cambiar aleatoriamente con texto aleatorio de 500 caractares.
+Then(
+  "el administrador modifica la nota del miembro con texto aleatorio",
+  function () {
+    Members.fillNoteFormPAPD();
+  }
+);
 
 // // APD-07 Modificar a un usuario y agregarle mas de 500 caracteres que no son los permitidos.
 

@@ -21,6 +21,17 @@ class Settings {
       .type(data[0].description);
   }
 
+  public fillNewTitleFormPDAD(): void {
+    cy.get('[data-testid="title-and-description"]')
+      .find("input:eq(0)")
+      .clear()
+      .type(faker.music.songName());
+    cy.get('[data-testid="title-and-description"]')
+      .find("input:eq(1)")
+      .clear()
+      .type(faker.music.album());
+  }
+
   public clickSaveSettings(): void {
     cy.get('[data-testid="title-and-description"]')
       .find("button")
