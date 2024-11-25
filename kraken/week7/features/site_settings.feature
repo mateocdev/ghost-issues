@@ -65,7 +65,7 @@ Scenario: Config-04: Actualizar el color del sitio con un color valido
   And I check the new accent color was saved
 
 @user5 @web
-Scenario: Config-04: Actualizar el color del sitio con un color fuera del limite
+Scenario: Config-05: Actualizar el color del sitio con un color fuera del limite
   Given I am a logged in admin with "<USERNAME>" and "<PASSWORD>" at "<GHOST_URL>"
   And I wait for 1 seconds
   When I click on settings menu on sidebar
