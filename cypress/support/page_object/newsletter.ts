@@ -21,6 +21,19 @@ class NewsLetter {
       .click();
   }
 
+  public fillNewNewsletterFormPseudo(data: any): void {
+    cy.get('[data-testid="add-newsletter-modal"]')
+      .find("input")
+      .type(data.name);
+    cy.get('[data-testid="add-newsletter-modal"]')
+      .find("textarea")
+      .type(data.description);
+    cy.get('[data-testid="add-newsletter-modal"]')
+      .find("button")
+      .contains("Create")
+      .click();
+  }
+
   public fillNewNewsletterFormPDAD(): void {
     cy.get('[data-testid="add-newsletter-modal"]')
       .find("input")

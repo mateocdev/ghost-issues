@@ -13,6 +13,11 @@ class Members {
     cy.get("[data-test-input='member-email']").type(data[0].email);
   }
 
+  public fillNewMemberFormPseudo(data: any): void {
+    cy.get("[data-test-input='member-name']").type(data.name);
+    cy.get("[data-test-input='member-email']").type(data.email);
+  }
+
   public clickSaveMember(): void {
     cy.get('[data-test-button="save"]').click();
   }
@@ -54,6 +59,10 @@ class Members {
   public fillModifyMemberForm(data: any): void {
     cy.get('[data-test-input="member-name"]').clear().type(data[1].name);
     cy.get('[data-test-input="member-email"]').clear().type(data[1].email);
+  }
+
+  public fillRandomEmail(data: any): void {
+    cy.get('[data-test-input="member-email"]').clear().type(data.email);
   }
 
   public fillModifyMemberFormPDAD(): void {
