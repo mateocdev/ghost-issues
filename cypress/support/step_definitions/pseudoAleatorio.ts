@@ -37,27 +37,14 @@ Then("el administrador tiene un error", function () {
   Members.getErrorSaveNote();
 });
 
-// // Scenario: APD-04 Crear un newsletter y verificar su existencia.
+// Scenario: PDAD-04 Crear un newsletter con contenido aleatorio y verificar..
 
-// When("el administrador ingresa a la pagina de newsletters", function () {
-//   newsletter.visitNewsletterPage(this.data.urlNewsletter);
-// });
-
-// Then("el administrador hace click en nuevo newsletter", function () {
-//   newsletter.clickNewNewsletterButton();
-// });
-
-// Then("el administrador ingresa los datos del nuevo newsletter", function () {
-//   newsletter.fillNewNewsletterForm(this.data.news);
-// });
-
-// Then('el administrador deberia ver el nuevo newsletter en la lista de newsletters', function(){
-//   newsletter.showNewsletterCreated();
-// });
-
-// When('el administrador hace click en el botón de guardar newsletter', function(){
-//   newsletter.clickSaveNewsletter();
-// });
+Then(
+  "el administrador ingresa los datos del nuevo newsletter con faker",
+  function () {
+    newsletter.fillNewNewsletterFormPDAD();
+  }
+);
 
 // // Scenario: APD-05 Modificar el titulo y la descripcion del sitio
 
