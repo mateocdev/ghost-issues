@@ -88,6 +88,10 @@ class Members {
       .clear()
       .type(faker.person.lastName());
   }
+
+  public fillNoteFormPseudo(data: any): void {
+    cy.get("[data-test-input='member-note']").type(data.note);
+  }
 }
 
 export default new Members();

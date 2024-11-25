@@ -40,24 +40,24 @@ Feature: Pool de Datos (Pseudo) Aleatorio Dinámico
 #   When el administrador hace click en el botón de guardar newsletter
 #   Then el administrador deberia ver el nuevo newsletter en la lista de newsletters
 
-Scenario: PSEUDO-05 Modificar el titulo y la descripcion del sitio
-  Given el administrador esta en la pagina de inicio de sesion
-  When el administrador ingresa un correo y una contraseña
-  When hace clic en el botón de inicio de sesión
-  When el administrador ingresa a la pagina de configuracion
-  Then el administrador modifica el titulo y la descripcion del sitio pseudo
-  When el administrador hace click en el botón de guardar configuracion
-
-
-# Scenario: PSEUDO-06 Modificar a un usuario y agregarle 500 caracteres en nota el maximo permitido
+# Scenario: PSEUDO-05 Modificar el titulo y la descripcion del sitio
 #   Given el administrador esta en la pagina de inicio de sesion
 #   When el administrador ingresa un correo y una contraseña
 #   When hace clic en el botón de inicio de sesión
-#   When el administrador ingresa a la pagina de miembros
-#   Then el administrador hace click en el miembro existente
-#   Then el administrador modifica la nota del miembro
-#   Then el administrador hace click en el botón de guardar
-#   Then el administrador ingresa a la pagina de miembros
+#   When el administrador ingresa a la pagina de configuracion
+#   Then el administrador modifica el titulo y la descripcion del sitio pseudo
+#   When el administrador hace click en el botón de guardar configuracion
+
+
+Scenario: PSEUDO-06 Modificar a un usuario y agregarle 500 caracteres en nota el maximo permitido
+  Given el administrador esta en la pagina de inicio de sesion
+  When el administrador ingresa un correo y una contraseña
+  When hace clic en el botón de inicio de sesión
+  When el administrador ingresa a la pagina de miembros
+  Then el administrador hace click en cualquier miembro
+  Then el administrador modifica la nota del miembro pseudo
+  Then el administrador hace click en el botón de guardar
+  Then el administrador ingresa a la pagina de miembros
 
 # Scenario: PSEUDO-07 Modificar a un usuario y agregarle mas de 500 caracteres que no son los permitidos.
 #   Given el administrador esta en la pagina de inicio de sesion

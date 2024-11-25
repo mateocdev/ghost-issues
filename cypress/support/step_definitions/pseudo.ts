@@ -47,11 +47,11 @@ Then(
   }
 );
 
-// // Scenario: APD-06 Modificar a un usuario y agregarle 500 caracteres en nota el maximo permitido
+// Scenario: PSEUDO-06 Modificar a un usuario y agregarle 500 caracteres en nota el maximo permitido
 
-// Then("el administrador modifica la nota del miembro", function () {
-//   Members.fillNoteForm(this.data.newMember);
-// });
+Then("el administrador modifica la nota del miembro pseudo", function () {
+  Members.fillNoteFormPseudo(this.info[0].newMember[0]);
+});
 
 // // APD-07 Modificar a un usuario y agregarle mas de 500 caracteres que no son los permitidos.
 
