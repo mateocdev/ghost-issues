@@ -68,16 +68,15 @@ Feature: Pool de Datos (Pseudo) Aleatorio Dinámico
 #   Then el administrador hace click en el botón de guardar
 #   Then el administrador debe ver un error de que la nota no puede tener mas de 500 caracteres
 
-
-# Scenario: APD-08 Actualizar informacion de un tag y verificar la actualizacion
-#   Given el administrador esta en la pagina de inicio de sesion
-#   When el administrador ingresa un correo y una contraseña
-#   When hace clic en el botón de inicio de sesión
-#   When el administrador ingresa a la pagina de tags
-#   Then el administrador hace click en el tag existente
-#   Then el administrador modifica la informacion del tag
-#   Then el administrador hace click en el botón de guardar
-#   Then el administrador ingresa a la pagina de tags
+Scenario: PAPD-08 Actualizar un tag con un nombre aleatorio
+  Given el administrador esta en la pagina de inicio de sesion
+  When el administrador ingresa un correo y una contraseña
+  When hace clic en el botón de inicio de sesión
+  When el administrador ingresa a la pagina de tags
+  Then el administrador hace click en el tag existente
+  Then el administrador modifica la informacion del tag con informacion aleatoria
+  Then el administrador hace click en el botón de guardar
+  Then el administrador ingresa a la pagina de tags
 
 # Scenario: APD-09 Agregar staff como contribuidor a la plataforma
 #   Given el administrador esta en la pagina de inicio de sesion

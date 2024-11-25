@@ -29,6 +29,13 @@ class Tags {
       .type(data[0].newDescriptionTag);
   }
 
+  public fillModifyTagFormPDAD(): void {
+    cy.get('[data-test-input="tag-name"]').clear().type(faker.animal.cat());
+    cy.get('[data-test-input="tag-description"]')
+      .clear()
+      .type(faker.book.title());
+  }
+
   public fillNewTagFormPDAD(): void {
     cy.get('[data-test-input="tag-name"]').type(faker.lorem.word());
     cy.get('[data-test-input="tag-description"]').type(faker.lorem.sentence());

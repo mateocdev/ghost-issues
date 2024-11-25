@@ -73,14 +73,14 @@ Then(
   }
 );
 
-// // Scenario: APD-08 Actualizar informacion de un tag y verificar la actualizacion
-// Then('el administrador hace click en el tag existente', function(){
-//   tags.clickTag(this.data.tags);
-// });
+//Scenario: PAPD-08 Actualizar un tag con un nombre aleatorio
 
-// Then('el administrador modifica la informacion del tag', function(){
-//   tags.fillModifyTagForm(this.data.tags);
-// });
+Then(
+  "el administrador modifica la informacion del tag con informacion aleatoria",
+  function () {
+    tags.fillModifyTagFormPDAD(this.data.tags);
+  }
+);
 
 // // Scenario: APD-09 Agregar staff como contribuidor a la plataforma
 
