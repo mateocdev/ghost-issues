@@ -56,6 +56,13 @@ class Members {
     cy.get('[data-test-input="member-email"]').clear().type(data[1].email);
   }
 
+  public fillModifyMemberFormPDAD(): void {
+    cy.get("[data-test-input='member-name']").clear().type(faker.book.title());
+    cy.get("[data-test-input='member-email']")
+      .clear()
+      .type(faker.internet.email());
+  }
+
   public clickRandomMember(): void {
     cy.get('[data-test-table="members"]').find("tr").eq(1).click();
   }

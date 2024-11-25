@@ -22,6 +22,10 @@ class Tags {
     cy.get(".content-list").contains(data[0].nameTag).click();
   }
 
+  public clickRandomTag(): void {
+    cy.get(".content-list").find("a").eq(0).click();
+  }
+
   public fillModifyTagForm(data: any): void {
     cy.get('[data-test-input="tag-name"]').clear().type(data[0].newNameTag);
     cy.get('[data-test-input="tag-description"]')

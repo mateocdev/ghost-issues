@@ -78,9 +78,13 @@ Then(
 Then(
   "el administrador modifica la informacion del tag con informacion aleatoria",
   function () {
-    tags.fillModifyTagFormPDAD(this.data.tags);
+    tags.fillModifyTagFormPDAD();
   }
 );
+
+Then("el administrador hace click en un tag aleatorio", function () {
+  tags.clickRandomTag();
+});
 
 // Scenario: PAPD-09 Agregar a staff como contribuidor con datos aleatorios a la plataforma
 
@@ -91,8 +95,10 @@ Then(
   }
 );
 
-// // Scenario: APD-10 Modificar la información de un miembro y verificar el cambio
-
-// Then('el administrador modifica la informacion del miembro', function(){
-//   Members.fillModifyMemberForm(this.data.newMember);
-// });
+// Scenario: PAPD-10 Cambiar aleatoriamente la informacion de un miembro y verificar el cambio
+Then(
+  "el administrador modifica la informacion del miembro aleatoriamente",
+  function () {
+    Members.fillModifyMemberFormPDAD();
+  }
+);
