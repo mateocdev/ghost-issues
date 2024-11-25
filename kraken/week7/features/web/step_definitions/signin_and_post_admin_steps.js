@@ -2,7 +2,7 @@ const { Given, When, Then } = require('@cucumber/cucumber');
 
 const loginPageObject = require('../pages/login_page');
 const loginPage = new loginPageObject();
-const { getRandomItemFromDataPool, getPseudoDynamicRandomItemFromDataPool } = require('../helpers/data_pool');
+const { getAPrioriRandomItemFromDataPool, getPseudoDynamicRandomItemFromDataPool } = require('../helpers/data_pool');
 const { faker } = require('@faker-js/faker');
 
 
@@ -67,7 +67,7 @@ When('I check post is published', async function() {
 })
 
 When('I enter Post info with large title', async function() {
-    const post = getRandomItemFromDataPool('posts_datapool_edge_case_limits_a_priori');
+    const post = getAPrioriRandomItemFromDataPool('posts_datapool_edge_case_limits_a_priori');
     let element = await this.driver.$('[data-test-editor-title-input]');
     await element.click();
     await element.setValue(post.title);

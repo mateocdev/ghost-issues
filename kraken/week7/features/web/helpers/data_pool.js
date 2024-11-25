@@ -25,7 +25,7 @@ function getAPrioriDataPool(dataPoolName) {
   return JSON.parse(data);
 };
 
-function getRandomItemFromDataPool (dataPoolName) {
+function getAPrioriRandomItemFromDataPool (dataPoolName) {
     const dataPool = getAPrioriDataPool(dataPoolName);
     const randomIndex = Math.floor(Math.random() * (dataPool.length - 1));
     return dataPool[randomIndex];
@@ -37,4 +37,4 @@ async function getPseudoDynamicRandomItemFromDataPool (schema, count) {
   return dataPool[randomIndex];
 }
 
-module.exports = { getRandomItemFromDataPool, getPseudoDynamicRandomItemFromDataPool };
+module.exports = { getAPrioriRandomItemFromDataPool, getPseudoDynamicRandomItemFromDataPool };
