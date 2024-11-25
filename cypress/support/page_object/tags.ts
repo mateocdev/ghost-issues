@@ -14,6 +14,11 @@ class Tags {
     cy.get('[data-test-input="tag-description"]').type(data[0].descriptionTag);
   }
 
+  public fillNewTagFormPseudo(data: any): void {
+    cy.get('[data-test-input="tag-name"]').type(data.nameTag);
+    cy.get('[data-test-input="tag-description"]').type(data.descriptionTag);
+  }
+
   public showTagCreated(): void {
     cy.get("[data-test-tag-slug]").should("be.visible");
   }

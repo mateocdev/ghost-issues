@@ -19,7 +19,7 @@ Then(
 
 // Scenario: PSEUDO-02 Crear un tag y validar su creacion
 Then("el administrador ingresa los datos del nuevo tag pseudo", function () {
-  tags.fillNewTagForm(this.info[0].tags[0]);
+  tags.fillNewTagFormPseudo(this.info[0].tags[0]);
 });
 
 // Scenario: PDAD-03 Modificar un miembro con un email aleatorio.
@@ -28,33 +28,14 @@ Then("el administrador ingresa un email aleatorio", function () {
   Members.fillRandomEmail(this.info[0].newMember[0]);
 });
 
-// // Scenario: APD-04 Crear un newsletter y verificar su existencia.
+// Scenario: PSEUDO-04 Crear un newsletter y verificar su existencia.
 
-// When("el administrador ingresa a la pagina de newsletters", function () {
-//   newsletter.visitNewsletterPage(this.data.urlNewsletter);
-// });
-
-// Then("el administrador hace click en nuevo newsletter", function () {
-//   newsletter.clickNewNewsletterButton();
-// });
-
-// Then("el administrador ingresa los datos del nuevo newsletter", function () {
-//   newsletter.fillNewNewsletterForm(this.data.news);
-// });
-
-// Then(
-//   "el administrador deberia ver el nuevo newsletter en la lista de newsletters",
-//   function () {
-//     newsletter.showNewsletterCreated();
-//   }
-// );
-
-// When(
-//   "el administrador hace click en el botón de guardar newsletter",
-//   function () {
-//     newsletter.clickSaveNewsletter();
-//   }
-// );
+Then(
+  "el administrador ingresa los datos del nuevo newsletter pseudo",
+  function () {
+    newsletter.fillNewNewsletterFormPseudo(this.info[0].news[0]);
+  }
+);
 
 // // Scenario: APD-05 Modificar el titulo y la descripcion del sitio
 
