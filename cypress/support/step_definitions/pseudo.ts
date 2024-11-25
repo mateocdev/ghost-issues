@@ -6,31 +6,27 @@ import tags from "../page_object/tags";
 
 beforeEach(function () {
   cy.fixture("pseudoRandom").then((data) => {
-    this.data = data;
+    this.info = data;
   });
 });
 
 Then(
   "el administrador ingresa los datos del nuevo miembro pseudo",
   function () {
-    Members.fillNewMemberForm(this.data.newMember);
+    Members.fillNewMemberFormPseudo(this.info[0].newMember[0]);
   }
 );
 
 // Scenario: PSEUDO-02 Crear un tag y validar su creacion
 Then("el administrador ingresa los datos del nuevo tag pseudo", function () {
-  tags.fillNewTagForm(this.data.tags);
+  tags.fillNewTagForm(this.info[0].tags[0]);
 });
 
-// // Scenario: APD-03 Desactivar una suscripción para un miembro existente y validar.
+// Scenario: PDAD-03 Modificar un miembro con un email aleatorio.
 
-// Then("el administrador hace click en el miembro existente", function () {
-//   Members.clickMember(this.data.newMember);
-// });
-
-// Then("el administrador desactiva la suscripción del miembro", function () {
-//   Members.deactivateSubscription();
-// });
+Then("el administrador ingresa un email aleatorio", function () {
+  Members.fillRandomEmail(this.info[0].newMember[0]);
+});
 
 // // Scenario: APD-04 Crear un newsletter y verificar su existencia.
 

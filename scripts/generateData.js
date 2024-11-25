@@ -12,6 +12,7 @@ function generateTestData() {
         {
           name: faker.internet.displayName(),
           email: faker.internet.email(),
+          randomEmail: faker.internet.email(),
           note: faker.lorem.sentence(),
           errorNote: faker.lorem.paragraphs(3),
         },
