@@ -17,26 +17,10 @@ Then(
   }
 );
 
-// // Scenario: APD-02 Crear un tag y validar su creacion
-
-// When("el administrador ingresa a la pagina de tags", function () {
-//   tags.visitTagsPage();
-// });
-
-// Then("el administrador hace click en nuevo tag", function () {
-//   tags.clickNewTagButton(this.data.urlTag);
-// });
-
-// Then("el administrador ingresa los datos del nuevo tag", function () {
-//   tags.fillNewTagForm(this.data.tags);
-// });
-
-// Then(
-//   "el administrador deberia ver el nuevo tag en la lista de tags",
-//   function () {
-//     tags.showTagCreated();
-//   }
-// );
+// Scenario: PSEUDO-02 Crear un tag y validar su creacion
+Then("el administrador ingresa los datos del nuevo tag pseudo", function () {
+  tags.fillNewTagForm(this.data.tags);
+});
 
 // // Scenario: APD-03 Desactivar una suscripción para un miembro existente y validar.
 
