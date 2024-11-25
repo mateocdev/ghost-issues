@@ -82,10 +82,9 @@ Esto generara datos pseudoaleatorios los cuales seran usados en la plataforma, p
 - cypress/
 
 - e2e/: Contiene todos los archivos de prueba escritos en Gherkin.
-- fixtures/: Aquí se encuentran los datos de prueba si son necesarios.
+- fixtures/: Aquí se encuentran los datos de prueba los apriori que contienen los generados por el pool de datos y los pseudo aleatorios
 - support/page_object: Continene los archivos con patron de page object
-- support/step_definitions/base: Contiene los archivos de cypress con page object y given when then para la version 4.5 de ghost
-- support/step_definitions/rc: Contiene los archivos de cypress con page object y given when then para la version lastest de ghost
+- support/step_definitions: Contiene los archivos de cypress con page object y given when then para la version lastest de ghost
 - features/: Archivos de características que describen los escenarios de prueba usando el lenguaje Gherkin.
 
 ## Licencia
