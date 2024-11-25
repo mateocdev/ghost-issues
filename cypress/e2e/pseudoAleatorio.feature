@@ -59,25 +59,25 @@ Feature: Pool de Datos (Pseudo) Aleatorio Dinámico
 #   Then el administrador hace click en el botón de guardar
 #   Then el administrador ingresa a la pagina de miembros
 
-Scenario: PSEUDO-07 Modificar a un usuario y agregarle mas de 500 caracteres que no son los permitidos.
-  Given el administrador esta en la pagina de inicio de sesion
-  When el administrador ingresa un correo y una contraseña
-  When hace clic en el botón de inicio de sesión
-  When el administrador ingresa a la pagina de miembros
-  Then el administrador hace click en el miembro existente
-  Then el administrador modifica la nota del miembro y agrega mas de 500 caracteres
-  Then el administrador hace click en el botón de guardar
-
-
-# Scenario: PSEUDO-08 Actualizar informacion de un tag y verificar la actualizacion
+# Scenario: PSEUDO-07 Modificar a un usuario y agregarle mas de 500 caracteres que no son los permitidos.
 #   Given el administrador esta en la pagina de inicio de sesion
 #   When el administrador ingresa un correo y una contraseña
 #   When hace clic en el botón de inicio de sesión
-#   When el administrador ingresa a la pagina de tags
-#   Then el administrador hace click en el tag existente
-#   Then el administrador modifica la informacion del tag
+#   When el administrador ingresa a la pagina de miembros
+#   Then el administrador hace click en el miembro existente
+#   Then el administrador modifica la nota del miembro y agrega mas de 500 caracteres
 #   Then el administrador hace click en el botón de guardar
-#   Then el administrador ingresa a la pagina de tags
+
+
+Scenario: PSEUDO-08 Actualizar informacion de un tag y verificar la actualizacion
+  Given el administrador esta en la pagina de inicio de sesion
+  When el administrador ingresa un correo y una contraseña
+  When hace clic en el botón de inicio de sesión
+  When el administrador ingresa a la pagina de tags
+  Then el administrador hace click en un tag aleatorio
+  Then el administrador modifica la informacion del tag pseudo
+  Then el administrador hace click en el botón de guardar
+  Then el administrador ingresa a la pagina de tags
 
 # Scenario: PSEUDO-09 Agregar staff como contribuidor a la plataforma
 #   Given el administrador esta en la pagina de inicio de sesion

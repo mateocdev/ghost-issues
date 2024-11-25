@@ -69,14 +69,11 @@ Then(
   }
 );
 
-// // Scenario: APD-08 Actualizar informacion de un tag y verificar la actualizacion
-// Then("el administrador hace click en el tag existente", function () {
-//   tags.clickTag(this.data.tags);
-// });
+// Scenario: PSEUDO-08 Actualizar informacion de un tag y verificar la actualizacion
 
-// Then("el administrador modifica la informacion del tag", function () {
-//   tags.fillModifyTagForm(this.data.tags);
-// });
+Then("el administrador modifica la informacion del tag pseudo", function () {
+  tags.fillModifyTagFormPseudo(this.info[0].tags[0]);
+});
 
 // // Scenario: APD-09 Agregar staff como contribuidor a la plataforma
 

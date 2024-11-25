@@ -49,6 +49,13 @@ class Tags {
     cy.get('[data-test-input="tag-name"]').type(faker.lorem.word());
     cy.get('[data-test-input="tag-description"]').type(faker.lorem.sentence());
   }
+
+  public fillModifyTagFormPseudo(data: any): void {
+    cy.get('[data-test-input="tag-name"]').clear().type(data.newNameTag);
+    cy.get('[data-test-input="tag-description"]')
+      .clear()
+      .type(data.newDescriptionTag);
+  }
 }
 
 export default new Tags();
