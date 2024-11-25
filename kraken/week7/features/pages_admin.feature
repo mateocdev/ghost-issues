@@ -1,7 +1,7 @@
 Feature: Administración de Publicaciones
 
 @user1 @web
-Scenario: Page-01: Verificar que un administrador puede crear una nueva pagina con título y contenido.
+Scenario: Page-01: Crear una nueva pagina con título y contenido valido
   Given I am a logged in admin with "<USERNAME>" and "<PASSWORD>" at "<GHOST_URL>"
   And I wait for 1 seconds
   When I click on Pages menu on sidebar

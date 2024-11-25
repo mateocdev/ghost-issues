@@ -1,7 +1,7 @@
 Feature: Administración de Publicaciones
 
 @user1 @web
-Scenario: Post-01: Verificar que un administrador puede crear una nueva publicación con título y contenido.
+Scenario: Post-01: Crear una nueva publicación con título y contenido valido
   Given I am a logged in admin with "<USERNAME>" and "<PASSWORD>" at "<GHOST_URL>"
   And I wait for 1 seconds
   When I click on Posts menu on sidebar
@@ -35,12 +35,12 @@ Scenario: Post-03: Crear nuevo Post con titulo que contiene caracteres especiale
   And I enter Post info with special characters title
   And I wait for 10 seconds
   Then I check post is saved as draft
-  Then I send a signal to user 4 containing "special_page_created"
+  Then I send a signal to user 4 containing "special_post_created"
 
 @user4 @web
-Scenario: Page-04: Buscar post con titulo que contiene caracteres especiales
+Scenario: Post-04: Buscar post con titulo que contiene caracteres especiales
   Given I am a logged in admin with "<USERNAME>" and "<PASSWORD>" at "<GHOST_URL>"
-  And I wait for a signal containing "special_page_created" for 60 seconds
+  And I wait for a signal containing "special_post_created" for 60 seconds
   And I click on search button
   And I wait for 1 seconds
   And I enter search term
