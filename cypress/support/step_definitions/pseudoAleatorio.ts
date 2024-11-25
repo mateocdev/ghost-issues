@@ -82,23 +82,14 @@ Then(
   }
 );
 
-// // Scenario: APD-09 Agregar staff como contribuidor a la plataforma
+// Scenario: PAPD-09 Agregar a staff como contribuidor con datos aleatorios a la plataforma
 
-// When('el administrador ingresa a la pagina de staff', function(){
-//     settings.visitStaffPage(this.data.staffUrl);
-// });
-
-// Then('el administrador hace click en invitar gente', function(){
-//   settings.clickInvitePeople();
-// });
-
-// Then('el administrador ingresa un correo y selecciona role de contribuidor', function(){
-//   settings.fillInvitePeopleForm(this.data.settings);
-// });
-
-// Then('el administrador hace click en el botón de invitar', function(){
-//   settings.clickSaveInvitation();
-// });
+Then(
+  "el administrador ingresa un correo aleatorio y selecciona role de contribuidor",
+  function () {
+    settings.fillInvitePeopleFormPDAD();
+  }
+);
 
 // // Scenario: APD-10 Modificar la información de un miembro y verificar el cambio
 

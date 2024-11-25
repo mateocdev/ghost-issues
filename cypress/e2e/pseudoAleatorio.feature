@@ -68,24 +68,24 @@ Feature: Pool de Datos (Pseudo) Aleatorio Dinámico
 #   Then el administrador hace click en el botón de guardar
 #   Then el administrador debe ver un error de que la nota no puede tener mas de 500 caracteres
 
-Scenario: PAPD-08 Actualizar un tag con un nombre aleatorio
-  Given el administrador esta en la pagina de inicio de sesion
-  When el administrador ingresa un correo y una contraseña
-  When hace clic en el botón de inicio de sesión
-  When el administrador ingresa a la pagina de tags
-  Then el administrador hace click en el tag existente
-  Then el administrador modifica la informacion del tag con informacion aleatoria
-  Then el administrador hace click en el botón de guardar
-  Then el administrador ingresa a la pagina de tags
-
-# Scenario: APD-09 Agregar staff como contribuidor a la plataforma
+# Scenario: PAPD-08 Actualizar un tag con un nombre aleatorio
 #   Given el administrador esta en la pagina de inicio de sesion
 #   When el administrador ingresa un correo y una contraseña
 #   When hace clic en el botón de inicio de sesión
-#   When el administrador ingresa a la pagina de staff
-#   Then el administrador hace click en invitar gente
-#   Then el administrador ingresa un correo y selecciona role de contribuidor
-#   Then el administrador hace click en el botón de invitar
+#   When el administrador ingresa a la pagina de tags
+#   Then el administrador hace click en el tag existente
+#   Then el administrador modifica la informacion del tag con informacion aleatoria
+#   Then el administrador hace click en el botón de guardar
+#   Then el administrador ingresa a la pagina de tags
+
+Scenario: PAPD-09 Agregar a staff como contribuidor con datos aleatorios a la plataforma
+  Given el administrador esta en la pagina de inicio de sesion
+  When el administrador ingresa un correo y una contraseña
+  When hace clic en el botón de inicio de sesión
+  When el administrador ingresa a la pagina de staff
+  Then el administrador hace click en invitar gente
+  Then el administrador ingresa un correo aleatorio y selecciona role de contribuidor
+  Then el administrador hace click en el botón de invitar
 
 # Scenario: APD-10 Modificar la información de un miembro y verificar el cambio
 #   Given el administrador esta en la pagina de inicio de sesion

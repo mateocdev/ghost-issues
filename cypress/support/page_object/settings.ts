@@ -56,6 +56,12 @@ class Settings {
       .type(data[0].emailStaff);
   }
 
+  public fillInvitePeopleFormPDAD(): void {
+    cy.get('[data-testid="invite-user-modal"]')
+      .find("input")
+      .type(faker.internet.email());
+  }
+
   public fillInvitePopleFormPDAD(): void {
     cy.get('[data-testid="invite-user-modal"]')
       .find("input")
