@@ -92,6 +92,10 @@ class Members {
   public fillNoteFormPseudo(data: any): void {
     cy.get("[data-test-input='member-note']").type(data.note);
   }
+
+  public fillNoteFormPseudoError(data: any): void {
+    cy.get("[data-test-input='member-note']").type(data.errorNote);
+  }
 }
 
 export default new Members();

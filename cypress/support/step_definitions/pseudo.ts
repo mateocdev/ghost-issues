@@ -53,21 +53,21 @@ Then("el administrador modifica la nota del miembro pseudo", function () {
   Members.fillNoteFormPseudo(this.info[0].newMember[0]);
 });
 
-// // APD-07 Modificar a un usuario y agregarle mas de 500 caracteres que no son los permitidos.
+// Scenario: PSEUDO-07 Modificar a un usuario y agregarle mas de 500 caracteres que no son los permitidos.
 
-// Then(
-//   "el administrador modifica la nota del miembro y agrega mas de 500 caracteres",
-//   function () {
-//     Members.fillNoteForm(this.data.newMember, true);
-//   }
-// );
+Then(
+  "el administrador modifica la nota del miembro y agrega mas de 500 caracteres pseudo",
+  function () {
+    Members.fillNoteFormPseudoError(this.info[0].newMember[0]);
+  }
+);
 
-// Then(
-//   "el administrador debe ver un error de que la nota no puede tener mas de 500 caracteres",
-//   function () {
-//     Members.getErrorSaveNote();
-//   }
-// );
+Then(
+  "el administrador debe ver un error de que la nota no puede tener mas de 500 caracteres",
+  function () {
+    Members.getErrorSaveNote();
+  }
+);
 
 // // Scenario: APD-08 Actualizar informacion de un tag y verificar la actualizacion
 // Then("el administrador hace click en el tag existente", function () {
