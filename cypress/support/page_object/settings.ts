@@ -74,6 +74,17 @@ class Settings {
       .contains("Send invitation")
       .click();
   }
+
+  public fillNewTitleFormPseudo(data: any): void {
+    cy.get('[data-testid="title-and-description"]')
+      .find("input:eq(0)")
+      .clear()
+      .type(data.title);
+    cy.get('[data-testid="title-and-description"]')
+      .find("input:eq(1)")
+      .clear()
+      .type(data.description);
+  }
 }
 
 export default new Settings();
