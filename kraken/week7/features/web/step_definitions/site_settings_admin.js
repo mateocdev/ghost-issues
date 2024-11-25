@@ -74,12 +74,24 @@ When('I click customize button', async function() {
     return result;
 });
 
-When('I set a random theme color', async function() {
+When('I set a valid theme color', async function() {
     const element = await this.driver.$('[data-testid="design-modal"] input:nth-child(2)');
     await element.click();
-    // generate random color
-    const randomColor = Math.floor(Math.random()*16777215).toString(16);
-    const result = await element.setValue(randomColor);
+    // Generar valores RGB manualmente
+    const r = faker.random.number({ min: 0, max: 255 });
+    const g = faker.random.number({ min: 0, max: 255 });
+    const b = faker.random.number({ min: 0, max: 255 });
+    const randomRGBColor = `rgb(${r}, ${g}, ${b})`;
+
+    const result = await element.setValue(randomRGBColor);
+    return result;
+});
+
+When('I set a large theme color', async function() {
+    const item = getAPrioriRandomItemFromDataPool('settings_limit_values');
+    const element = await this.driver.$('[data-testid="design-modal"] input:nth-child(2)');
+    console.log("item.rgb_invalid: ", item.rgb_invalid);
+    const result = await element.setValue(item.rgb_invalid);
     return result;
 });
 
