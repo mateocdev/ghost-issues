@@ -64,7 +64,7 @@ Scenario: PSEUDO-07 Modificar a un usuario y agregarle mas de 500 caracteres que
   When el administrador ingresa un correo y una contraseña
   When hace clic en el botón de inicio de sesión
   When el administrador ingresa a la pagina de miembros
-  Then el administrador hace click en el miembro existente
+  Then el administrador hace click en cualquier miembro
   Then el administrador modifica la nota del miembro y agrega mas de 500 caracteres
   Then el administrador hace click en el botón de guardar
 
