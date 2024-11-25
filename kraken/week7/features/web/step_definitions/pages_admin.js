@@ -1,6 +1,6 @@
 const { Given, When, Then } = require('@cucumber/cucumber');
 
-const { getRandomItemFromDataPool, getPseudoDynamicRandomItemFromDataPool } = require('../helpers/data_pool');
+const { getAPrioriRandomItemFromDataPool, getPseudoDynamicRandomItemFromDataPool } = require('../helpers/data_pool');
 const { faker } = require('@faker-js/faker');
 
 let specialPageItem;
@@ -54,7 +54,7 @@ When('I check page is not saved as draft', async function() {
 });
 
 When('I enter Page info with large title', async function() {
-    const item = getRandomItemFromDataPool('pages_datapool_edge_case_limits_a_priori');
+    const item = getAPrioriRandomItemFromDataPool('pages_datapool_edge_case_limits_a_priori');
     let element = await this.driver.$('[data-test-editor-title-input]');
     await element.click();
     await element.setValue(item.title);

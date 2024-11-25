@@ -1,5 +1,5 @@
 const { Given, When, Then } = require('@cucumber/cucumber');
-const { getRandomItemFromDataPool, getPseudoDynamicRandomItemFromDataPool } = require('../helpers/data_pool');
+const { getAPrioriRandomItemFromDataPool, getPseudoDynamicRandomItemFromDataPool } = require('../helpers/data_pool');
 const { faker } = require('@faker-js/faker');
 
 
@@ -62,7 +62,7 @@ When('I check there are results in the table', async function() {
 });
 
 When('I enter required member info', async function() {
-    const member = getRandomItemFromDataPool('members');
+    const member = getAPrioriRandomItemFromDataPool('members');
     let element = await this.driver.$('#member-name');
     await element.click();
     await element.setValue(member.first_name + " " + member.last_name);
