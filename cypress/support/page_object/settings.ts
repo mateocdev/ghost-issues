@@ -85,6 +85,13 @@ class Settings {
       .clear()
       .type(data.description);
   }
+
+  public fillInvitePeopleFormPseudo(data: any): void {
+    cy.get('[data-testid="invite-user-modal"]')
+      .find("input")
+      .clear()
+      .type(data.emailStaff);
+  }
 }
 
 export default new Settings();

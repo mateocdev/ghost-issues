@@ -75,29 +75,19 @@ Then("el administrador modifica la informacion del tag pseudo", function () {
   tags.fillModifyTagFormPseudo(this.info[0].tags[0]);
 });
 
-// // Scenario: APD-09 Agregar staff como contribuidor a la plataforma
+// Scenario: PSEUDO-09 Agregar staff como contribuidor a la plataforma
+Then(
+  "el administrador ingresa un correo y selecciona role de contribuidor pseudo",
+  function () {
+    settings.fillInvitePeopleFormPseudo(this.info[0].settings[0]);
+  }
+);
 
-// When("el administrador ingresa a la pagina de staff", function () {
-//   settings.visitStaffPage(this.data.staffUrl);
-// });
+// Scenario: PSEUDO-10 Modificar la información de un miembro y verificar el cambio
 
-// Then("el administrador hace click en invitar gente", function () {
-//   settings.clickInvitePeople();
-// });
-
-// Then(
-//   "el administrador ingresa un correo y selecciona role de contribuidor",
-//   function () {
-//     settings.fillInvitePeopleForm(this.data.settings);
-//   }
-// );
-
-// Then("el administrador hace click en el botón de invitar", function () {
-//   settings.clickSaveInvitation();
-// });
-
-// // Scenario: APD-10 Modificar la información de un miembro y verificar el cambio
-
-// Then("el administrador modifica la informacion del miembro", function () {
-//   Members.fillModifyMemberForm(this.data.newMember);
-// });
+Then(
+  "el administrador modifica la informacion del miembro pseudo",
+  function () {
+    Members.fillModifyMemberFormPseudo(this.info[0].newMember[0]);
+  }
+);
