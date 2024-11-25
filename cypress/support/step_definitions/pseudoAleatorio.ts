@@ -64,15 +64,14 @@ Then(
   }
 );
 
-// // APD-07 Modificar a un usuario y agregarle mas de 500 caracteres que no son los permitidos.
+// Scenario: PAPD-07 Cambiar aleateoriamente con texto aleatorio de mas de 500 caracteres no permitidos.
 
-// Then('el administrador modifica la nota del miembro y agrega mas de 500 caracteres', function(){
-//   Members.fillNoteForm(this.data.newMember, true);
-// });
-
-// Then('el administrador debe ver un error de que la nota no puede tener mas de 500 caracteres', function(){
-//   Members.getErrorSaveNote();
-// });
+Then(
+  "el administrador modifica la nota del miembro y agrega mas de 500 caracteres aleatorios",
+  function () {
+    Members.fillNoteFormFullTextPAPD();
+  }
+);
 
 // // Scenario: APD-08 Actualizar informacion de un tag y verificar la actualizacion
 // Then('el administrador hace click en el tag existente', function(){

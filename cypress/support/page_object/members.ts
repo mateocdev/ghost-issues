@@ -36,7 +36,15 @@ class Members {
   }
 
   public fillNoteFormPAPD(): void {
-    cy.get("[data-test-input='member-note']").type(faker.lorem.paragraph());
+    cy.get("[data-test-input='member-note']")
+      .clear()
+      .type(faker.lorem.paragraph());
+  }
+
+  public fillNoteFormFullTextPAPD(): void {
+    cy.get("[data-test-input='member-note']")
+      .clear()
+      .type(faker.lorem.paragraphs(5));
   }
 
   public getErrorSaveNote(): void {

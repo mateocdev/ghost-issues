@@ -48,23 +48,23 @@ Feature: Pool de Datos (Pseudo) Aleatorio Dinámico
 #   Then el administrador modifica el titulo y la descripcion del sitio aleatorio
 #   When el administrador hace click en el botón de guardar configuracion
 
-Scenario: PAPD-06 Cambiar aleatoriamente con texto aleatorio de 500 caractares.
-  Given el administrador esta en la pagina de inicio de sesion
-  When el administrador ingresa un correo y una contraseña
-  When hace clic en el botón de inicio de sesión
-  When el administrador ingresa a la pagina de miembros
-  Then el administrador hace click en cualquier miembro
-  Then el administrador modifica la nota del miembro con texto aleatorio
-  Then el administrador hace click en el botón de guardar
-  Then el administrador ingresa a la pagina de miembros
-
-# Scenario: APD-07 Modificar a un usuario y agregarle mas de 500 caracteres que no son los permitidos.
+# Scenario: PAPD-06 Cambiar aleatoriamente con texto aleatorio de 500 caractares.
 #   Given el administrador esta en la pagina de inicio de sesion
 #   When el administrador ingresa un correo y una contraseña
 #   When hace clic en el botón de inicio de sesión
 #   When el administrador ingresa a la pagina de miembros
-#   Then el administrador hace click en el miembro existente
-#   Then el administrador modifica la nota del miembro y agrega mas de 500 caracteres
+#   Then el administrador hace click en cualquier miembro
+#   Then el administrador modifica la nota del miembro con texto aleatorio
+#   Then el administrador hace click en el botón de guardar
+#   Then el administrador ingresa a la pagina de miembros
+
+# Scenario: PAPD-07 Cambiar aleateoriamente con texto aleatorio de mas de 500 caracteres no permitidos.
+#   Given el administrador esta en la pagina de inicio de sesion
+#   When el administrador ingresa un correo y una contraseña
+#   When hace clic en el botón de inicio de sesión
+#   When el administrador ingresa a la pagina de miembros
+#   Then el administrador hace click en cualquier miembro
+#   Then el administrador modifica la nota del miembro y agrega mas de 500 caracteres aleatorios
 #   Then el administrador hace click en el botón de guardar
 #   Then el administrador debe ver un error de que la nota no puede tener mas de 500 caracteres
 
