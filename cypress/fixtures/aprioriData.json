@@ -1,5 +1,5 @@
 {
-  "url": "http://localhost:3001/ghost/#/signin",
+  "url": "http://localhost:2368/ghost/#/signin",
   "email": "mateo.castano1@yahoo.com",
   "password": "1022389881",
   "newMember": [
@@ -14,25 +14,24 @@
       "email": "ivan.castano@yahoo.com"
     }
   ],
-  "urlTag": "http://localhost:3001/ghost/#/tags/new",
+  "urlTag": "http://localhost:2368/ghost/#/tags/new",
   "tags": [
     {
       "nameTag": "Tag1",
       "descriptionTag": "Description",
       "newNameTag": "Tag2",
       "newDescriptionTag": "Description2"
-
     }
   ],
-  "urlNewsletter": "http://localhost:3001/ghost/#/settings/newsletters",
+  "urlNewsletter": "http://localhost:2368/ghost/#/settings/newsletters",
   "news": [
     {
       "name": "Newsletter",
       "description": "Description1"
     }
   ],
-  "settingsUrl": "http://localhost:3001/ghost/#/settings",
-  "staffUrl": "http://localhost:3001/ghost/#/settings/staff",
+  "settingsUrl": "http://localhost:2368/ghost/#/settings",
+  "staffUrl": "http://localhost:2368/ghost/#/settings/staff",
   "settings": [
     {
       "title": "Title1",

@@ -1,7 +1,7 @@
-import { faker } from '@faker-js/faker';
+import { faker } from "@faker-js/faker";
 class Members {
   public visitMembersPage(): void {
-    cy.get('[data-test-nav="members"]').click()
+    cy.get('[data-test-nav="members"]').click();
   }
 
   public clickNewMemberButton(): void {
@@ -18,7 +18,7 @@ class Members {
   }
 
   public showMemberCreated(): void {
-    cy.get('[data-test-table="members"]').should('be.visible');
+    cy.get('[data-test-table="members"]').should("be.visible");
   }
 
   public clickMember(data: any): void {
@@ -26,16 +26,17 @@ class Members {
   }
 
   public deactivateSubscription(): void {
-    cy.get('[data-test-member-settings-switch]').find('span').click();
+    cy.get("[data-test-member-settings-switch]").find("span").click();
   }
 
   public fillNoteForm(data: any, hasError?: boolean): void {
-    if (hasError) cy.get('[data-test-input="member-note"]').type(data[0].errorNote);
+    if (hasError)
+      cy.get('[data-test-input="member-note"]').type(data[0].errorNote);
     else cy.get('[data-test-input="member-note"]').type(data[0].note);
   }
 
   public getErrorSaveNote(): void {
-    cy.get('[data-test-button="save"]').contains('Retry');
+    cy.get('[data-test-button="save"]').contains("Retry");
   }
 
   public fillModifyMemberForm(data: any): void {
@@ -43,6 +44,9 @@ class Members {
     cy.get('[data-test-input="member-email"]').clear().type(data[1].email);
   }
 
+  public clickRandomMember(): void {
+    cy.get('[data-test-table="members"]').find("tr").eq(1).click();
+  }
 
   // pseudo aleatorio con faker
 
@@ -51,7 +55,11 @@ class Members {
     cy.get("[data-test-input='member-email']").type(faker.internet.email());
   }
 
-  
+  public updateMemberFormPDAD(): void {
+    cy.get("[data-test-input='member-email']")
+      .clear()
+      .type(faker.person.lastName());
+  }
 }
 
 export default new Members();

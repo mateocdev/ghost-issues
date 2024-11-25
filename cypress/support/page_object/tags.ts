@@ -1,12 +1,12 @@
-import { faker } from "@faker-js/faker/.";
+import { faker } from "@faker-js/faker";
 
 class Tags {
   public visitTagsPage(): void {
-    cy.get('[data-test-nav="tags"]').click()
+    cy.get('[data-test-nav="tags"]').click();
   }
 
   public clickNewTagButton(url: string): void {
-    cy.visit(url)
+    cy.visit(url);
   }
 
   public fillNewTagForm(data: any): void {
@@ -15,18 +15,20 @@ class Tags {
   }
 
   public showTagCreated(): void {
-    cy.get('[data-test-tag-slug]').should('be.visible');
+    cy.get("[data-test-tag-slug]").should("be.visible");
   }
 
   public clickTag(data: any): void {
-    cy.get('.content-list').contains(data[0].nameTag).click();
+    cy.get(".content-list").contains(data[0].nameTag).click();
   }
 
- public fillModifyTagForm(data: any): void {
+  public fillModifyTagForm(data: any): void {
     cy.get('[data-test-input="tag-name"]').clear().type(data[0].newNameTag);
-    cy.get('[data-test-input="tag-description"]').clear().type(data[0].newDescriptionTag);
+    cy.get('[data-test-input="tag-description"]')
+      .clear()
+      .type(data[0].newDescriptionTag);
   }
-  
+
   public fillNewTagFormPDAD(): void {
     cy.get('[data-test-input="tag-name"]').type(faker.lorem.word());
     cy.get('[data-test-input="tag-description"]').type(faker.lorem.sentence());
@@ -34,4 +36,3 @@ class Tags {
 }
 
 export default new Tags();
-
