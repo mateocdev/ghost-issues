@@ -30,15 +30,6 @@ Sigue estos pasos para configurar el entorno de prueba:
    cd ghost-issues
    ```
 
-**Configuracion en ghost local**
-
-- Asegurate de que ghost este corriendo localmente en el puerto http://localhost:2368/ para la version rc
-- Para la version base corre el comando 
-```bash
-docker run --name my-ghost -e url=http://localhost:3001 -p 3001:2368 ghost:5.96
-```
-
-
 **Instala las dependencias del proyecto:**
 
 Ejecuta el siguiente comando para instalar Cypress y otras dependencias necesarias:
@@ -77,29 +68,13 @@ npx cypress run
 
 Esto ejecutará todas las pruebas en el directorio cypress/e2e.
 
-**Explicacion pixel match:**
+**Ejecuccion script datos pseudoaleatorios:**
 
-- [Ejecuccion de pixel match](https://github.com/mateocdev/ghost-issues/blob/master/pixelmatch/README.md)
-
-**Ejecución de imagenes con pixel match:**
-
-Para poder ejecutar el script y encontrar la regresion visual ejecutar el siguiente comando:
-
+- Para poder crear datos pseudo aleatorios mediante faker-schema debemos ejectuar el siguiente comando:
 ```bash
-npm run compare
+node scripts/generateData.js
 ```
-
-Esto va a generar los screenshots en la carpeta cypress/screenshots
-
-**Ejecución del reporte:**
-
-Para poder ejecutar el script y genere el reporte tiene que ejecutar el siguiente comando:
-
-```bash
-cd pixelmatch && node index.js
-```
-
-Esto va a generar dos archivos en la carpeta cypress el report.html e index.css, ejecute el report.html con chrome.
+Esto generara datos pseudoaleatorios los cuales seran usados en la plataforma, podemos ver el archivo generado en fixtures/pseudoRandom.json
 
 
 
